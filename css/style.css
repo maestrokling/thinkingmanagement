@@ -139,6 +139,16 @@ nav .links a:hover { color: #0f0f1a; }
 }
 .contact-links a:hover { border-bottom-color: #2563a0; }
 
+/* === Writing Note === */
+.writing-note {
+  margin-top: 16px;
+  color: #777;
+  font-size: 0.9rem;
+}
+.writing-note:first-of-type {
+  margin-top: 24px;
+}
+
 /* === Footer === */
 footer {
   padding: 36px 0;
