@@ -154,6 +154,30 @@ nav .links a:hover { color: #0f0f1a; }
 }
 .contact-links a:hover { border-bottom-color: #2563a0; }
 
+/* === Writing Upcoming === */
+.writing-upcoming {
+  padding: 28px 0 8px;
+}
+.writing-upcoming h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.writing-item--upcoming {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid #ecedf0;
+  opacity: 0.7;
+}
+.writing-item--upcoming .title { font-weight: 600; color: #0f0f1a; font-size: 1.02rem; }
+.writing-item--upcoming .desc { color: #666; font-size: 0.88rem; margin-top: 4px; line-height: 1.6; }
+.writing-item--upcoming .meta { color: #bbb; font-size: 0.82rem; white-space: nowrap; margin-left: 32px; font-weight: 500; }
+
 /* === Writing Note === */
 .writing-note {
   margin-top: 16px;
