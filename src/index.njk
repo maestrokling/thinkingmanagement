@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Nathan Kling
+---
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__name">Nathan Kling</h1>
+    <p class="hero__tagline">Turning AI ambition into organizational reality.<br>Strategy. Transformation. Delivery.</p>
+    <a href="#contact" class="btn">Let's Talk</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section__title">About</h2>
+    <div class="about__content">
+      <p class="about__lead">Senior leader at the intersection of AI strategy, organizational transformation, and delivery leadership.</p>
+      <p>Fifteen years of professional services and delivery leadership — building teams, shipping products, and leading the kind of change that actually sticks. My focus now is where it matters most: helping organizations move from AI experimentation to AI execution.</p>
+      <p>I think about the human side of technology adoption — the change management, the capability building, the leadership alignment that separates pilot projects from real transformation. Strategic thinking backed by the discipline to ship.</p>
+      <p>MBA and Master of Music. The analytical rigor you'd expect, plus the creative problem-solving you wouldn't.</p>
+      <div class="about__availability">
+        <h3>Open to</h3>
+        <ul>
+          <li>Executive leadership roles</li>
+          <li>Fractional / interim engagements</li>
+          <li>Advisory &amp; board positions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="writing">
+  <div class="container">
+    <h2 class="section__title">Writing</h2>
+    <p class="section__subtitle">Thoughts on AI adoption, leadership, and the human side of transformation.</p>
+    <div class="articles">
+      {%- for article in articles %}
+      <article class="article-card">
+        <span class="article-card__source">{{ article.source }}</span>
+        <time class="article-card__date" datetime="{{ article.date }}">{{ article.date | readableDate }}</time>
+        <h3 class="article-card__title">
+          <a href="{{ article.url }}" target="_blank" rel="noopener">{{ article.title }}</a>
+        </h3>
+        <p class="article-card__excerpt">{{ article.excerpt }}</p>
+      </article>
+      {%- endfor %}
+      {%- if articles.length == 0 %}
+      <p class="articles__empty">New writing coming soon.</p>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section__title">Get in Touch</h2>
+    <p class="contact__lead">Interested in working together? Let's start a conversation.</p>
+    <div class="contact__links">
+      <a href="mailto:nathan@thinkingmanagement.com" class="contact__link">
+        <span class="contact__label">Email</span>
+        <span class="contact__value">nathan@thinkingmanagement.com</span>
+      </a>
+      <a href="https://linkedin.com/in/nathankling" target="_blank" rel="noopener" class="contact__link">
+        <span class="contact__label">LinkedIn</span>
+        <span class="contact__value">linkedin.com/in/nathankling</span>
+      </a>
+    </div>
+  </div>
+</section>

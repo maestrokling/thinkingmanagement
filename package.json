@@ -1,0 +1,13 @@
+{
+  "name": "thinkingmanagement",
+  "version": "1.0.0",
+  "description": "Nathan Kling — AI Strategy & Leadership",
+  "scripts": {
+    "build": "node _data/fetch-medium.js && npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "rss-parser": "^3.13.0"
+  }
+}
