@@ -60,6 +60,21 @@ nav .links a:hover { color: #0f0f1a; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+.hero__text { flex: 1; }
+.hero__photo img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e5e7eb;
+  flex-shrink: 0;
+}
 .hero p.intro {
   font-size: 1.2rem;
   color: #4a4a5a;
@@ -163,6 +178,10 @@ footer {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.3rem; }
   .hero { padding: 130px 0 70px; }
+  .hero__inner { flex-direction: column; text-align: center; }
+  .hero__photo img { width: 200px; height: 200px; }
+  .hero__text .subtitle, .hero__text .intro { text-align: center; }
+  .hero__text .intro { max-width: 100%; }
   .hero p.intro { font-size: 1.05rem; }
   .services-grid { grid-template-columns: 1fr; }
   .highlight-stats { gap: 32px; }
