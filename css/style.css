@@ -106,6 +106,22 @@ nav .links a:hover { color: #0f0f1a; }
 .stat .number { font-size: 2.2rem; font-weight: 700; color: #0f0f1a; display: block; line-height: 1.2; }
 .stat .label { font-size: 0.82rem; color: #888; letter-spacing: 0.02em; }
 
+/* === Clients === */
+.clients-block {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #ecedf0;
+}
+.clients-block h2 {
+  margin-bottom: 16px;
+}
+.clients-list {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 2;
+  letter-spacing: 0.01em;
+}
+
 /* === Services === */
 .services-grid {
   display: grid;
