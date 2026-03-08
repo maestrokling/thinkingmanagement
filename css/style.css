@@ -12,20 +12,20 @@ body {
 
 /* === Layout === */
 .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
-section { padding: 64px 0; }
+section { padding: 44px 0; }
 section:nth-child(even) { background: #f7f8fa; }
 
 /* === Typography === */
 h1 { font-size: 3rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; color: #0f0f1a; }
 h2 {
-  font-size: 1.6rem; font-weight: 600; margin-bottom: 28px;
+  font-size: 1.6rem; font-weight: 600; margin-bottom: 20px;
   letter-spacing: -0.01em; color: #0f0f1a;
   padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb;
   display: inline-block;
 }
 h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #0f0f1a; }
-p { margin-bottom: 18px; color: #3a3a4a; }
+p { margin-bottom: 14px; color: #3a3a4a; }
 a { color: #2563a0; text-decoration: none; transition: color 0.15s; }
 a:hover { color: #1a4670; }
 strong { color: #0f0f1a; font-weight: 600; }
@@ -49,7 +49,7 @@ nav .links a:hover { color: #0f0f1a; }
 
 /* === Hero === */
 .hero {
-  padding: 160px 0 80px;
+  padding: 130px 0 48px;
   background: #fff;
 }
 .hero .subtitle {
@@ -80,7 +80,7 @@ nav .links a:hover { color: #0f0f1a; }
   color: #4a4a5a;
   max-width: 620px;
   margin-top: 20px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   line-height: 1.8;
 }
 .btn {
@@ -149,7 +149,7 @@ nav .links a:hover { color: #0f0f1a; }
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 22px 0;
+  padding: 16px 0;
   border-bottom: 1px solid #ecedf0;
   color: inherit;
   transition: background 0.15s;
@@ -207,7 +207,7 @@ nav .links a:hover { color: #0f0f1a; }
 
 /* === Signal Page === */
 .signal-hero {
-  padding: 160px 0 60px;
+  padding: 120px 0 32px;
   background: #fff;
 }
 .signal-hero h1 {
@@ -233,7 +233,7 @@ nav .links a:hover { color: #0f0f1a; }
   margin-top: 4px;
 }
 .signal-posts {
-  padding: 48px 0 88px;
+  padding: 32px 0 48px;
   background: #f7f8fa;
 }
 .signal-year {
@@ -246,7 +246,7 @@ nav .links a:hover { color: #0f0f1a; }
   padding-bottom: 8px;
 }
 .signal-follow {
-  padding: 48px 0;
+  padding: 32px 0;
   text-align: center;
   border-top: 1px solid #ecedf0;
 }
@@ -268,7 +268,7 @@ nav .links a.active {
 
 /* === Footer === */
 footer {
-  padding: 36px 0;
+  padding: 24px 0;
   text-align: center;
   color: #aaa;
   font-size: 0.82rem;
@@ -279,7 +279,7 @@ footer {
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.3rem; }
-  .hero { padding: 130px 0 70px; }
+  .hero { padding: 110px 0 40px; }
   .hero__inner { flex-direction: column; text-align: center; }
   .hero__photo img { width: 200px; height: 200px; }
   .hero__text .subtitle, .hero__text .intro { text-align: center; }
