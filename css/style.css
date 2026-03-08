@@ -12,7 +12,7 @@ body {
 
 /* === Layout === */
 .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
-section { padding: 88px 0; }
+section { padding: 64px 0; }
 section:nth-child(even) { background: #f7f8fa; }
 
 /* === Typography === */
@@ -49,7 +49,7 @@ nav .links a:hover { color: #0f0f1a; }
 
 /* === Hero === */
 .hero {
-  padding: 180px 0 110px;
+  padding: 160px 0 80px;
   background: #fff;
 }
 .hero .subtitle {
@@ -99,7 +99,7 @@ nav .links a:hover { color: #0f0f1a; }
 /* === About === */
 .about p { max-width: 700px; }
 .highlight-stats {
-  display: flex; gap: 48px; margin: 40px 0 0;
+  display: flex; gap: 48px; margin: 32px 0 0;
   flex-wrap: wrap;
 }
 .stat { text-align: left; }
@@ -108,8 +108,8 @@ nav .links a:hover { color: #0f0f1a; }
 
 /* === Clients === */
 .clients-block {
-  margin-top: 56px;
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 32px;
   border-top: 1px solid #ecedf0;
 }
 .clients-block h2 {
@@ -141,7 +141,7 @@ nav .links a:hover { color: #0f0f1a; }
 }
 .service-card h3 { color: #0f0f1a; font-size: 1.05rem; }
 .service-card p { color: #555; font-size: 0.92rem; margin-bottom: 0; line-height: 1.7; }
-.service-cta { margin-top: 16px; font-size: 0.92rem; color: #3a3a4a; }
+.service-cta { margin-top: 20px; padding-top: 12px; border-top: 1px solid #ecedf0; font-size: 0.92rem; color: #3a3a4a; }
 
 /* === Writing === */
 .writing-list { display: flex; flex-direction: column; gap: 0; }
