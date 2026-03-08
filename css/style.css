@@ -267,6 +267,123 @@ nav .links a.active {
   padding-bottom: 2px;
 }
 
+/* === Signal Post Page === */
+.post-header {
+  padding: 120px 0 32px;
+  background: #fff;
+}
+.post-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  max-width: 720px;
+}
+.post-meta {
+  font-size: 0.88rem;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.post-meta .source-tag {
+  color: #2563a0;
+  font-weight: 600;
+}
+.post-body {
+  padding: 0 0 48px;
+  background: #fff;
+}
+.post-body .container {
+  max-width: 720px;
+}
+.post-body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #3a3a4a;
+  margin-bottom: 18px;
+}
+.post-body .section-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f0f1a;
+  margin-top: 32px;
+  margin-bottom: 14px;
+}
+.post-body .point-header {
+  font-weight: 600;
+  color: #0f0f1a;
+}
+.post-footer {
+  padding: 32px 0;
+  border-top: 1px solid #ecedf0;
+}
+.post-footer .container {
+  max-width: 720px;
+}
+.post-footer .recommended-watch {
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: #f7f8fa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.post-footer .recommended-watch h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.post-footer .recommended-watch p {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.post-footer .post-origin {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #666;
+}
+.post-footer .back-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.post-pending {
+  padding: 24px;
+  background: #f7f8fa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-top: 8px;
+}
+.post-pending p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #3a3a4a;
+  margin-bottom: 16px;
+}
+.post-pending .read-full {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0f0f1a;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.1s;
+}
+.post-pending .read-full:hover {
+  background: #2563a0;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.signal-subscribe {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
 /* === Footer === */
 footer {
   padding: 24px 0;
@@ -306,10 +423,14 @@ footer {
     gap: 18px;
   }
   .mobile-toggle { display: block; }
+  .post-header { padding: 100px 0 24px; }
+  .post-header h1 { font-size: 1.8rem; }
+  .post-body p { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 20px; }
   h1 { font-size: 1.9rem; }
   .highlight-stats { flex-direction: column; gap: 20px; }
+  .post-header h1 { font-size: 1.6rem; }
 }
