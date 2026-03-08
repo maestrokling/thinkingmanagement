@@ -188,6 +188,60 @@ nav .links a:hover { color: #0f0f1a; }
   margin-top: 24px;
 }
 
+/* === Signal Page === */
+.signal-hero {
+  padding: 160px 0 60px;
+  background: #fff;
+}
+.signal-hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+.signal-tagline {
+  font-size: 1.25rem;
+  color: #2563a0;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.signal-desc {
+  font-size: 1.05rem;
+  color: #4a4a5a;
+  max-width: 680px;
+  line-height: 1.8;
+}
+.signal-cadence {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 4px;
+}
+.signal-posts {
+  padding: 48px 0 88px;
+  background: #f7f8fa;
+}
+.signal-year {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+.signal-cta {
+  padding: 48px 0;
+  text-align: center;
+}
+.signal-cta p {
+  color: #555;
+  font-size: 1rem;
+}
+nav .links a.active {
+  color: #0f0f1a;
+  border-bottom: 2px solid #2563a0;
+  padding-bottom: 2px;
+}
+
 /* === Footer === */
 footer {
   padding: 36px 0;
