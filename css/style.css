@@ -207,7 +207,7 @@ nav .links a:hover { color: #0f0f1a; }
 
 /* === Signal Page === */
 .signal-hero {
-  padding: 120px 0 32px;
+  padding: 120px 0 0;
   background: #fff;
 }
 .signal-hero h1 {
@@ -228,12 +228,13 @@ nav .links a:hover { color: #0f0f1a; }
   line-height: 1.8;
 }
 .signal-cadence {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 1rem;
+  color: #555;
   margin-top: 4px;
+  margin-bottom: 0;
 }
 .signal-posts {
-  padding: 32px 0 48px;
+  padding: 24px 0 48px;
   background: #f7f8fa;
 }
 .signal-year {
