@@ -141,6 +141,7 @@ nav .links a:hover { color: #0f0f1a; }
 }
 .service-card h3 { color: #0f0f1a; font-size: 1.05rem; }
 .service-card p { color: #555; font-size: 0.92rem; margin-bottom: 0; line-height: 1.7; }
+.service-cta { margin-top: 16px; font-size: 0.92rem; color: #3a3a4a; }
 
 /* === Writing === */
 .writing-list { display: flex; flex-direction: column; gap: 0; }
