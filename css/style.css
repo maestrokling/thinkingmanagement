@@ -245,11 +245,18 @@ nav .links a:hover { color: #0f0f1a; }
   margin-bottom: 8px;
   padding-bottom: 8px;
 }
-.signal-cta {
+.signal-follow {
   padding: 48px 0;
   text-align: center;
+  border-top: 1px solid #ecedf0;
 }
-.signal-cta p {
+.signal-follow h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f0f1a;
+  margin-bottom: 8px;
+}
+.signal-follow p {
   color: #555;
   font-size: 1rem;
 }
