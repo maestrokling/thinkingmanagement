@@ -21,6 +21,28 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
   <link rel="stylesheet" href="/css/style.css?v=20260308e">
+  <style>
+    .framework-hook { font-size: 1.25rem; line-height: 1.6; color: #1a1a2e; font-weight: 400; margin-bottom: 32px; }
+    .framework-stakes { background: #f7f8fa; border-radius: 8px; padding: 28px 32px; margin-bottom: 36px; }
+    .framework-stakes p { margin-bottom: 10px; }
+    .framework-stakes p:last-child { margin-bottom: 0; }
+    .framework-nav { margin-bottom: 48px; }
+    .framework-nav-title { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-bottom: 16px; }
+    .framework-nav-grid { display: grid; grid-template-columns: 1fr; gap: 0; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+    .framework-nav-row { display: grid; grid-template-columns: 140px 1fr 160px; border-bottom: 1px solid #e5e7eb; }
+    .framework-nav-row:last-child { border-bottom: none; }
+    .framework-nav-row.header { background: #f7f8fa; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; color: #666; }
+    .framework-nav-cell { padding: 14px 18px; font-size: 0.92rem; color: #3a3a4a; border-right: 1px solid #e5e7eb; }
+    .framework-nav-cell:last-child { border-right: none; }
+    .framework-nav-cell strong { color: #0f0f1a; }
+    .framework-nav-cell a { font-weight: 500; }
+    .framework-divider { border: none; border-top: 2px solid #e5e7eb; margin: 48px 0; }
+    @media (max-width: 600px) {
+      .framework-nav-row { grid-template-columns: 1fr; }
+      .framework-nav-cell { border-right: none; border-bottom: 1px solid #f0f0f0; padding: 10px 16px; }
+      .framework-nav-cell:first-child { font-weight: 600; background: #f7f8fa; }
+    }
+  </style>
 </head>
 <body>
 
@@ -49,11 +71,61 @@
 <!-- Post Body -->
     <section class="post-body">
       <div class="container">
+      <!-- Tier 1: The Hook (CxO — 30 seconds) -->
+      <p class="framework-hook">Every organizational structure you&#x27;ve ever worked in was designed around a single assumption: intelligence is scarce, expensive, and needs to be carefully allocated. AI has retired that assumption. The organizations that redesign for abundance will outperform those that don&#x27;t. This framework shows you how.</p>
+
+      <!-- Tier 2: What Changes (VP — 2 minutes) -->
+      <div class="framework-stakes">
+        <p><strong>The structure changes.</strong> Pyramids built for intelligence scarcity become diamonds. The base narrows as AI handles execution. The middle expands as experienced professionals direct AI systems. Leadership gets smaller and more focused.</p>
+        <p><strong>The teams change.</strong> Five-person autonomous workshops replace traditional departments. Each workshop produces at the level of a traditional team of twenty. Coordination follows biological limits (Dunbar&#x27;s numbers), not org chart logic.</p>
+        <p><strong>The collaboration model changes.</strong> Four models exist on a spectrum from human-controlled to fully integrated. Most organizations need all four, applied to different types of work. Choosing wrong is expensive.</p>
+        <p><strong>The transformation path changes.</strong> It maps directly onto organizational health disciplines. The AI transformation work and the culture work are the same work, described in different vocabulary.</p>
+      </div>
+
+      <!-- Tier 3: Navigation Matrix (Director/Manager — where to start) -->
+      <div class="framework-nav">
+        <p class="framework-nav-title">Find Your Entry Point</p>
+        <div class="framework-nav-grid">
+          <div class="framework-nav-row header">
+            <div class="framework-nav-cell">Your Role</div>
+            <div class="framework-nav-cell">What Matters to You</div>
+            <div class="framework-nav-cell">Start Here</div>
+          </div>
+          <div class="framework-nav-row">
+            <div class="framework-nav-cell"><strong>CxO / Board</strong></div>
+            <div class="framework-nav-cell">Competitive risk, structural shift, strategic positioning</div>
+            <div class="framework-nav-cell"><a href="#diamond">Diamond Structure</a></div>
+          </div>
+          <div class="framework-nav-row">
+            <div class="framework-nav-cell"><strong>VP / SVP</strong></div>
+            <div class="framework-nav-cell">Org redesign, team composition, collaboration models</div>
+            <div class="framework-nav-cell"><a href="#collaboration">Collaboration Models</a></div>
+          </div>
+          <div class="framework-nav-row">
+            <div class="framework-nav-cell"><strong>Director</strong></div>
+            <div class="framework-nav-cell">Workshop formation, implementation pathway, metrics</div>
+            <div class="framework-nav-cell"><a href="#workshops">Workshops</a></div>
+          </div>
+          <div class="framework-nav-row">
+            <div class="framework-nav-cell"><strong>Manager</strong></div>
+            <div class="framework-nav-cell">Team transformation, skill development, daily operations</div>
+            <div class="framework-nav-cell"><a href="#development">Workshop Development</a></div>
+          </div>
+          <div class="framework-nav-row">
+            <div class="framework-nav-cell"><strong>Implementer</strong></div>
+            <div class="framework-nav-cell">Change management, phased rollout, failure patterns</div>
+            <div class="framework-nav-cell"><a href="#transformation">Transformation</a></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="framework-divider">
+
+      <!-- Tier 4: The Full Framework -->
       <p class="section-heading">Introduction</p>
-      <p>The shift from intelligence scarcity to intelligence abundance is already reshaping organizations, but most leaders lack a practical framework for navigating this transformation. In &quot;From Intelligence Scarcity to Intelligence Abundance&quot; [1], I outlined why traditional organizational structures fail when intelligence becomes democratized, cognitive leverage multiplies human capability, and hierarchies lose their economic rationale. This reference document provides the complete framework for designing organizations optimized for intelligence abundance.</p>
-      <p>The research is clear: organizations built around scarcity assumptions cannot function effectively in abundance conditions. But knowing what doesn&#x27;t work is insufficient. Leaders need specific models for how humans and AI collaborate, how teams structure themselves for maximum leverage, and how organizations manage the cultural transformation these changes demand.</p>
-      <p>This framework emerges from direct experience inside organizations attempting this transition, combined with research on human coordination limits, AI capability development, and organizational transformation patterns. It is designed for leaders who understand that intelligence abundance is not a future possibility but a current reality requiring immediate organizational response.</p>
-      <p class="section-heading">The Four Human-AI Collaboration Models</p>
+      <p>The shift from intelligence scarcity to intelligence abundance is already reshaping organizations, but most leaders lack a practical framework for navigating this transformation. In <a href="/signal/intelligence-scarcity-to-abundance.html">From Intelligence Scarcity to Intelligence Abundance</a>, I outlined why traditional organizational structures fail when intelligence becomes democratized, cognitive leverage multiplies human capability, and hierarchies lose their economic rationale. This reference document provides the complete methodology.</p>
+      <p>This framework emerges from direct experience inside organizations attempting this transition, combined with research on human coordination limits, AI capability development, and organizational transformation patterns.</p>
+      <p class="section-heading" id="collaboration">The Four Human-AI Collaboration Models</p>
       <p>The question facing every organization is not whether to integrate AI, but how humans and AI should work together within specific contexts. This is not a single answer but a spectrum of collaboration models, each optimized for different types of work and risk tolerances.</p>
       <p class="section-heading">Human-in-the-Loop Model</p>
       <p>In this model, AI operates autonomously while humans serve as quality controllers and decision approvers. The AI performs the analysis, generates the output, or executes the task, but human verification is required before any action is taken.</p>
@@ -75,7 +147,7 @@
       <p><strong>Optimal Applications:</strong> Creative and analytical work that benefits from iterative refinement. Design, strategic planning, research exploration, and complex writing projects thrive under this model. The back-and-forth dynamic allows for rapid iteration and exploration of possibilities that neither human nor AI would discover independently.</p>
       <p><strong>Technical Requirements:</strong> AI systems capable of real-time response and refinement. The technology must be responsive enough to feel like a conversation rather than a series of separate interactions. Latency and interaction friction destroy the collaborative flow that makes this model effective.</p>
       <p><strong>Cultural Prerequisites:</strong> Comfort with ambiguous boundaries between human and AI contributions. This model requires abandoning the need to clearly attribute every idea or insight to either human creativity or AI capability. The value emerges from the combination, not from the individual contributions.</p>
-      <p class="section-heading">The Diamond Organizational Structure</p>
+      <p class="section-heading" id="diamond">The Diamond Organizational Structure</p>
       <p>Traditional pyramid organizations concentrate expertise at the top and distribute execution across a broad base. Intelligence abundance inverts this logic, requiring new structural approaches that reflect the changed economics of cognitive work.</p>
       <p class="section-heading">Structural Dynamics</p>
       <p>The diamond shape emerges from AI&#x27;s differential impact across organizational levels. Entry-level execution work becomes increasingly automated, narrowing the base of the organizational pyramid. The middle layer expands as experienced professionals direct AI systems, verify outputs, and handle judgment-intensive work that requires human context. Leadership remains small and focused on maintaining constitutional standards rather than managing information flows.</p>
@@ -87,7 +159,7 @@
       <p><strong>Dunbar Number Applications:</strong> Robin Dunbar&#x27;s research demonstrates that humans can sustain high-context, effective coordination with approximately five people, with effectiveness declining at larger group sizes [2]. This biological constraint shapes the internal architecture of diamond organizations, regardless of AI capabilities.</p>
       <p><strong>Five-Person Workshop Model:</strong> The optimal structural unit is an autonomous workshop of five people, each directing AI systems within their domain expertise. Three to four workshops can coordinate effectively within a functional area, and three to four functional areas can align under strategic leadership. This creates the federated structure necessary for diamond organizations to maintain coherence without hierarchical overhead.</p>
       <p><strong>Constitutional Governance:</strong> Rather than managing through approval hierarchies, diamond organizations maintain alignment through shared constitutional principles that guide both human decision-making and AI system behavior. Workshops operate autonomously within these principles, escalating to leadership only when constitutional interpretation is required.</p>
-      <p class="section-heading">Five-Person Autonomous Workshops</p>
+      <p class="section-heading" id="workshops">Five-Person Autonomous Workshops</p>
       <p>The workshop model represents the fundamental building block of intelligence-abundant organizations. Unlike traditional teams that coordinate human capabilities, workshops coordinate human-AI collaboration to achieve outcomes previously requiring much larger groups.</p>
       <p class="section-heading">Workshop Composition and Roles</p>
       <p>Each workshop requires a specific combination of capabilities, not necessarily embodied in five separate individuals. Role fluidity is essential, as workshop members must adapt to different coordination patterns depending on the work being performed.</p>
@@ -118,7 +190,7 @@
       <p><strong>Workflow Autonomy Percentage:</strong> Tracks what percentage of organizational workflows operate with minimal human intervention. This metric indicates how successfully the organization has transitioned from human-centric to AI-augmented processes while maintaining quality standards.</p>
       <p><strong>Exception Handling Effectiveness:</strong> Measures how well human experts handle the complex cases that AI cannot resolve independently. This metric ensures that increasing automation does not degrade the organization&#x27;s ability to handle difficult or unusual situations.</p>
       <p><strong>Constitutional Adherence Rate:</strong> Tracks how consistently autonomous workshops and AI systems operate within established organizational principles. This metric ensures that increased autonomy maintains organizational coherence and value alignment.</p>
-      <p class="section-heading">Transformation Through Five-Person Workshop Development</p>
+      <p class="section-heading" id="development">Transformation Through Five-Person Workshop Development</p>
       <p>The transition to intelligence abundance cannot be accomplished through traditional training programs focused on tool adoption. Instead, organizations must develop workshop-level capabilities that integrate human expertise with AI systems to create new forms of collective intelligence.</p>
       <p class="section-heading">Workshop-Centric Skill Development</p>
       <p><strong>Collaborative Specification:</strong> Workshop members must learn to clearly articulate what they want AI systems to accomplish, including context, constraints, and success criteria. This goes beyond prompt engineering to include the ability to break complex objectives into AI-manageable components while maintaining overall coherence.</p>
@@ -133,7 +205,7 @@
       <p><strong>Constitutional Development:</strong> Organizations must clearly articulate the principles that guide autonomous workshop operation, including quality standards, ethical boundaries, and strategic alignment. These principles evolve based on workshop experience and organizational learning.</p>
       <p><strong>Infrastructure Provision:</strong> Workshops require technical infrastructure, access to AI systems, and support for coordination across organizational boundaries. This infrastructure must be designed for workshop autonomy rather than central control.</p>
       <p><strong>Learning System Integration:</strong> Organizations must capture and share learning from successful workshop innovations while respecting workshop autonomy. This includes developing mechanisms for rapid adoption of successful practices without bureaucratic overhead.</p>
-      <p class="section-heading">The Lencioni Parallel: Change Management for Intelligence Abundance</p>
+      <p class="section-heading" id="transformation">The Lencioni Parallel: Change Management for Intelligence Abundance</p>
       <p>The transformation to intelligence abundance follows patterns identified in broader organizational change research. Patrick Lencioni&#x27;s four disciplines of organizational health—build a cohesive team, create clarity, overcommunicate clarity, and reinforce clarity—map directly onto the phases required for intelligence abundance transformation [3].</p>
       <p class="section-heading">Phase 1: Preparation (Build a Cohesive Team)</p>
       <p><strong>Leadership Alignment:</strong> Before any AI implementation begins, leadership must develop shared understanding of what intelligence abundance means for their organization. This includes agreeing on principles for human-AI collaboration, establishing quality standards, and committing to the cultural changes the transformation requires.</p>
