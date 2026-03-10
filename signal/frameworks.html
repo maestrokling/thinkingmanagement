@@ -387,27 +387,40 @@
       .crosscut-grid {
         grid-template-columns: 1fr;
         gap: 0;
+        border: none;
+        border-radius: 0;
       }
       .crosscut-header { display: none; }
       .crosscut-concept {
         background: #f7f8fa;
-        border-bottom: 1px solid #e5e7eb;
-        padding: 10px 16px;
+        border-bottom: none;
+        border-top: 2px solid #e5e7eb;
+        padding: 14px 16px 6px;
         font-size: 0.95rem;
+        margin-top: 8px;
+      }
+      .crosscut-grid > .crosscut-concept:first-of-type {
+        border-top: none;
+        margin-top: 0;
       }
       .crosscut-cell {
-        padding: 10px 16px 10px 28px;
+        padding: 8px 16px 8px 28px;
+        border-bottom: none;
+        border-right: none;
       }
-      .crosscut-cell[data-col]::after {
-        content: attr(data-col) ': ';
+      .crosscut-cell[data-col]::before {
+        content: attr(data-col);
         font-weight: 600;
-        font-size: 0.78rem;
+        font-size: 0.72rem;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.05em;
         color: #999;
         display: block;
-        margin-bottom: 2px;
+        margin-bottom: 1px;
       }
+      .crosscut-cell[data-col="What"]::before { color: #2563a0; }
+      .crosscut-cell[data-col="How"]::before  { color: #7c3aed; }
+      .crosscut-cell[data-col="Who"]::before   { color: #059669; }
 
       .start-grid {
         grid-template-columns: 1fr;
