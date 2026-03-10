@@ -38,9 +38,15 @@
     .framework-nav-cell a { font-weight: 500; }
     .framework-divider { border: none; border-top: 2px solid #e5e7eb; margin: 48px 0; }
     @media (max-width: 600px) {
-      .framework-nav-row { grid-template-columns: 1fr; }
-      .framework-nav-cell { border-right: none; border-bottom: 1px solid #f0f0f0; padding: 10px 16px; }
-      .framework-nav-cell:first-child { font-weight: 600; background: #f7f8fa; }
+      .framework-nav-grid { border: none; gap: 12px; }
+      .framework-nav-row.header { display: none; }
+      .framework-nav-row { grid-template-columns: 1fr; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; gap: 6px; }
+      .framework-nav-cell { border: none; padding: 0; font-size: 0.9rem; }
+      .framework-nav-cell:first-child { font-size: 1rem; margin-bottom: 4px; }
+      .framework-nav-cell:nth-child(2) { color: #666; }
+      .framework-nav-cell:last-child { margin-top: 6px; }
+      .framework-nav-cell:nth-child(2)::before { content: ""; }
+      .framework-nav-cell:last-child::before { content: "→ "; }
     }
   </style>
 </head>
