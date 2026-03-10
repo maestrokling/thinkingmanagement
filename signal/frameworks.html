@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Intelligence Abundance Playbook | Signal | Nathan Kling</title>
+  <meta name="description" content="Three frameworks for organizations making the transition from intelligence scarcity to intelligence abundance. What to build, how to get there, and who your people become.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Intelligence Abundance Playbook">
+  <meta property="og:description" content="Three frameworks for organizations making the transition from intelligence scarcity to intelligence abundance.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/signal/frameworks.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Intelligence Abundance Playbook">
+  <meta name="twitter:description" content="Three frameworks for organizations making the transition from intelligence scarcity to intelligence abundance.">
+  <meta name="twitter:image" content="https://thinkingmanagement.com/img/headshot.png">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260310">
+  <style>
+    /* === Playbook Hero === */
+    .playbook-hero {
+      padding: 120px 0 0;
+      background: #fff;
+    }
+    .playbook-hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 8px;
+    }
+    .playbook-tagline {
+      font-size: 1.15rem;
+      color: #4a4a5a;
+      max-width: 660px;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* === Core Thesis === */
+    .thesis {
+      padding: 44px 0;
+      background: #fff;
+    }
+    .thesis-content {
+      max-width: 720px;
+    }
+    .thesis-content p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #3a3a4a;
+      margin-bottom: 16px;
+    }
+    .thesis-content p:last-child { margin-bottom: 0; }
+
+    /* === Triptych Panels === */
+    .triptych-section {
+      padding: 48px 0 56px;
+      background: #f7f8fa;
+    }
+    .triptych {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .triptych-panel {
+      width: 100%;
+      max-width: 700px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 28px 32px;
+      background: #fff;
+      position: relative;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .triptych-panel:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+      border-color: #d0d3d9;
+    }
+    .triptych-panel[data-layer="what"] { border-left: 4px solid #2563a0; }
+    .triptych-panel[data-layer="how"]  { border-left: 4px solid #7c3aed; }
+    .triptych-panel[data-layer="who"]  { border-left: 4px solid #059669; }
+
+    .panel-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+    .triptych-panel[data-layer="what"] .panel-tag { color: #2563a0; }
+    .triptych-panel[data-layer="how"]  .panel-tag { color: #7c3aed; }
+    .triptych-panel[data-layer="who"]  .panel-tag { color: #059669; }
+
+    .panel-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f0f1a;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .panel-question {
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .panel-summary {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+    .panel-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    /* Connector arrows */
+    .triptych-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 6px 0;
+    }
+    .connector-line {
+      width: 2px;
+      height: 20px;
+      background: #d0d3d9;
+    }
+    .connector-arrow {
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 8px solid #d0d3d9;
+    }
+    .connector-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #aaa;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    /* === How They Connect === */
+    .connections {
+      padding: 48px 0;
+      background: #fff;
+    }
+    .connections h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f0f1a;
+      margin-bottom: 8px;
+      padding-bottom: 0;
+      border-bottom: none;
+      display: block;
+    }
+    .connections .hook {
+      font-size: 1.05rem;
+      color: #4a4a5a;
+      margin-bottom: 32px;
+      max-width: 680px;
+      line-height: 1.8;
+    }
+
+    .crosscut-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr 1fr 1fr;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 720px;
+    }
+    .crosscut-cell {
+      padding: 14px 16px;
+      font-size: 0.85rem;
+      color: #3a3a4a;
+      border-bottom: 1px solid #f0f1f3;
+      border-right: 1px solid #f0f1f3;
+      line-height: 1.5;
+    }
+    .crosscut-cell:last-child { border-right: none; }
+    .crosscut-header {
+      background: #f7f8fa;
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #666;
+      padding: 12px 16px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    .crosscut-header.col-what { color: #2563a0; }
+    .crosscut-header.col-how  { color: #7c3aed; }
+    .crosscut-header.col-who  { color: #059669; }
+    .crosscut-concept {
+      font-weight: 600;
+      color: #0f0f1a;
+      font-size: 0.88rem;
+      background: #fafbfc;
+    }
+    /* Remove bottom border on last row */
+    .crosscut-grid > :nth-last-child(-n+4) { border-bottom: none; }
+
+    .connections-note {
+      font-size: 0.92rem;
+      color: #555;
+      margin-top: 24px;
+      max-width: 680px;
+      line-height: 1.75;
+    }
+
+    /* === Where to Start === */
+    .start-section {
+      padding: 48px 0;
+      background: #f7f8fa;
+    }
+    .start-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f0f1a;
+      margin-bottom: 24px;
+      padding-bottom: 0;
+      border-bottom: none;
+      display: block;
+    }
+    .start-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 720px;
+    }
+    .start-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 22px 24px;
+      background: #fff;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .start-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      border-color: #d0d3d9;
+    }
+    .start-card .start-persona {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .start-card .start-scenario {
+      font-size: 0.95rem;
+      color: #3a3a4a;
+      font-style: italic;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .start-card .start-rec {
+      font-size: 0.88rem;
+      color: #2563a0;
+      font-weight: 600;
+    }
+    .start-card.start-full {
+      grid-column: 1 / -1;
+      background: #fafbfc;
+    }
+
+    /* === Contact CTA === */
+    .playbook-cta {
+      padding: 40px 0;
+      background: #fff;
+      border-top: 1px solid #ecedf0;
+    }
+    .playbook-cta p {
+      font-size: 1.05rem;
+      color: #3a3a4a;
+      max-width: 600px;
+    }
+    .playbook-cta a {
+      font-weight: 600;
+    }
+
+    /* === Diagnostic Table === */
+    .diagnostic-section {
+      padding: 48px 0;
+      background: #fff;
+      border-top: 1px solid #ecedf0;
+    }
+    .diagnostic-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f0f1a;
+      margin-bottom: 8px;
+      padding-bottom: 0;
+      border-bottom: none;
+      display: block;
+    }
+    .diagnostic-hook {
+      font-size: 1.05rem;
+      color: #4a4a5a;
+      margin-bottom: 32px;
+      max-width: 680px;
+      line-height: 1.8;
+    }
+    .diagnostic {
+      max-width: 720px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .diagnostic-header {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      background: #f7f8fa;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    .diagnostic-header-cell {
+      padding: 12px 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #666;
+      border-right: 1px solid #e5e7eb;
+    }
+    .diagnostic-header-cell:last-child { border-right: none; }
+    .diagnostic-group { border-bottom: 1px solid #e5e7eb; }
+    .diagnostic-group:last-child { border-bottom: none; }
+    .diagnostic-group-label {
+      padding: 14px 20px 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: #fafbfc;
+      border-bottom: 1px solid #f0f1f3;
+    }
+    .diagnostic-group-label.missing-what { color: #2563a0; }
+    .diagnostic-group-label.missing-how  { color: #7c3aed; }
+    .diagnostic-group-label.missing-who  { color: #059669; }
+    .diagnostic-row {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      border-bottom: 1px solid #f0f1f3;
+    }
+    .diagnostic-group .diagnostic-row:last-child { border-bottom: none; }
+    .diagnostic-cell {
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      color: #3a3a4a;
+      line-height: 1.55;
+      border-right: 1px solid #f0f1f3;
+    }
+    .diagnostic-cell:last-child { border-right: none; }
+    .diagnostic-cell.symptom {
+      font-style: italic;
+      color: #555;
+    }
+    .diagnostic-cell.symptom::before { content: '\201C'; }
+    .diagnostic-cell.symptom::after { content: '\201D'; }
+    .diagnostic-cell.gap {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #0f0f1a;
+      display: flex;
+      align-items: center;
+    }
+    .diagnostic-cell.gap a { font-size: 0.85rem; }
+
+    /* === Mobile === */
+    @media (max-width: 700px) {
+      .playbook-hero { padding: 100px 0 0; }
+      .playbook-hero h1 { font-size: 2rem; }
+      .triptych-panel { padding: 22px 20px; }
+      .panel-title { font-size: 1.1rem; }
+
+      .crosscut-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .crosscut-header { display: none; }
+      .crosscut-concept {
+        background: #f7f8fa;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+      }
+      .crosscut-cell {
+        padding: 10px 16px 10px 28px;
+      }
+      .crosscut-cell[data-col]::after {
+        content: attr(data-col) ': ';
+        font-weight: 600;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #999;
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      .start-grid {
+        grid-template-columns: 1fr;
+      }
+      .start-card.start-full {
+        grid-column: auto;
+      }
+
+      .diagnostic-header { display: none; }
+      .diagnostic-row {
+        grid-template-columns: 1fr;
+        padding: 12px 20px;
+        gap: 6px;
+      }
+      .diagnostic-cell { padding: 0; border: none; }
+      .diagnostic-cell.gap {
+        font-size: 0.82rem;
+        color: #2563a0;
+      }
+      .diagnostic-cell.gap::before {
+        content: '\2192  Missing: ';
+        color: #999;
+        font-weight: 500;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .playbook-hero h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/signal" class="active">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="playbook-hero">
+  <div class="container">
+    <h1>The Intelligence Abundance Playbook</h1>
+    <p class="post-meta"><span class="source-tag">Frameworks</span> &middot; March 2026</p>
+    <p class="playbook-tagline">Three frameworks for organizations making the transition from intelligence scarcity to intelligence abundance. Each addresses a different dimension. Together, they form a system.</p>
+  </div>
+</section>
+
+<!-- Core Thesis -->
+<section class="thesis">
+  <div class="container">
+    <div class="thesis-content">
+      <p>Intelligence was scarce, <em><strong>now it is abundant.</strong></em> Every organizational structure built for scarcity is a liability.</p>
+      <p>Most AI transformations fail because they address only one dimension: usually technology, sometimes process, rarely culture. Sustainable transformation requires three things simultaneously: a new organizational model, a change pathway grounded in organizational health, and investment in the humans who make it work.</p>
+      <p>These three frameworks cover those three dimensions. They were designed to work together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- The Triptych -->
+<section class="triptych-section">
+  <div class="container">
+    <div class="triptych">
+
+      <div class="triptych-panel" data-layer="what">
+        <div class="panel-tag">What &mdash; The Destination</div>
+        <div class="panel-title">Intelligence Abundance Framework</div>
+        <div class="panel-question">What does an organization optimized for intelligence abundance look like?</div>
+        <div class="panel-summary">Diamond structure. Squad architecture. Four collaboration models. The organizational design that replaces hierarchies built for scarcity.</div>
+        <a href="/signal/intelligence-abundance-framework.html" class="panel-link">Read the framework &rarr;</a>
+      </div>
+
+      <div class="triptych-connector">
+        <div class="connector-line"></div>
+        <div class="connector-label">defines the target for</div>
+        <div class="connector-arrow"></div>
+      </div>
+
+      <div class="triptych-panel" data-layer="how">
+        <div class="panel-tag">How &mdash; The Pathway</div>
+        <div class="panel-title">AI Change Management Framework</div>
+        <div class="panel-question">How do you transform a traditional organization without breaking what already works?</div>
+        <div class="panel-summary">Four phases. Constitutional governance. Resistance arc. Failure patterns. The implementation methodology that builds the structure.</div>
+        <a href="/signal/ai-change-framework.html" class="panel-link">Read the framework &rarr;</a>
+      </div>
+
+      <div class="triptych-connector">
+        <div class="connector-line"></div>
+        <div class="connector-label">creates the context for</div>
+        <div class="connector-arrow"></div>
+      </div>
+
+      <div class="triptych-panel" data-layer="who">
+        <div class="panel-tag">Who &mdash; The People</div>
+        <div class="panel-title">Human Capability Model</div>
+        <div class="panel-question">What do people need to develop to thrive in intelligence abundance?</div>
+        <div class="panel-summary">Seven capabilities. Development pathways. The individual journey and the organizational responsibility that sustains the transformation.</div>
+        <a href="/signal/human-capability-framework.html" class="panel-link">Read the framework &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How They Connect -->
+<section class="connections">
+  <div class="container">
+    <h2>How They Connect</h2>
+    <p class="hook">Five concepts thread through all three frameworks. Each plays a different role depending on whether you are designing the organization, implementing the change, or developing the people.</p>
+
+    <div class="crosscut-grid">
+      <!-- Header -->
+      <div class="crosscut-header">Concept</div>
+      <div class="crosscut-header col-what">What (IAF)</div>
+      <div class="crosscut-header col-how">How (CMF)</div>
+      <div class="crosscut-header col-who">Who (HCM)</div>
+
+      <!-- Psychological Safety -->
+      <div class="crosscut-cell crosscut-concept">Psychological Safety</div>
+      <div class="crosscut-cell" data-col="What">Infrastructure requirement</div>
+      <div class="crosscut-cell" data-col="How">Phase prerequisite</div>
+      <div class="crosscut-cell" data-col="Who">Capability enabler</div>
+
+      <!-- The Squad -->
+      <div class="crosscut-cell crosscut-concept">The Squad</div>
+      <div class="crosscut-cell" data-col="What">Organizational unit</div>
+      <div class="crosscut-cell" data-col="How">Implementation mechanism</div>
+      <div class="crosscut-cell" data-col="Who">Learning accelerator</div>
+
+      <!-- Constitutional Governance -->
+      <div class="crosscut-cell crosscut-concept">Constitutional Governance</div>
+      <div class="crosscut-cell" data-col="What">Coordination mechanism</div>
+      <div class="crosscut-cell" data-col="How">Cultural artifact</div>
+      <div class="crosscut-cell" data-col="Who">Ethical framework</div>
+
+      <!-- Resistance Arc -->
+      <div class="crosscut-cell crosscut-concept">Emotional Resistance Arc</div>
+      <div class="crosscut-cell" data-col="What">Implicit</div>
+      <div class="crosscut-cell" data-col="How">Organizational phenomenon</div>
+      <div class="crosscut-cell" data-col="Who">Individual journey</div>
+
+      <!-- Collaboration Models -->
+      <div class="crosscut-cell crosscut-concept">Collaboration Models</div>
+      <div class="crosscut-cell" data-col="What">Defined</div>
+      <div class="crosscut-cell" data-col="How">Selected &amp; practiced</div>
+      <div class="crosscut-cell" data-col="Who">Enabled by collaborative intelligence</div>
+    </div>
+
+    <p class="connections-note">You can read them in any order, but they implement in sequence. The organizational design creates the context. The change pathway builds the structure. The human development sustains it. Skip any layer and the transformation stalls.</p>
+  </div>
+</section>
+
+<!-- Where to Start -->
+<section class="start-section">
+  <div class="container">
+    <h2>Where to Start</h2>
+    <div class="start-grid">
+      <div class="start-card">
+        <div class="start-persona">CEO / CHRO</div>
+        <div class="start-scenario">"I need to understand what AI transformation actually requires."</div>
+        <div class="start-rec">Start with <a href="/signal/intelligence-abundance-framework.html">Intelligence Abundance</a> (the what), then <a href="/signal/ai-change-framework.html">Change Management</a> (the how).</div>
+      </div>
+      <div class="start-card">
+        <div class="start-persona">Transformation Lead</div>
+        <div class="start-scenario">"I'm leading an AI transformation that's stalling."</div>
+        <div class="start-rec">Start with <a href="/signal/ai-change-framework.html">Change Management</a>, particularly the failure patterns and resistance arc.</div>
+      </div>
+      <div class="start-card">
+        <div class="start-persona">People Leader</div>
+        <div class="start-scenario">"I'm worried about whether my people can make this transition."</div>
+        <div class="start-rec">Start with the <a href="/signal/human-capability-framework.html">Human Capability Model</a>.</div>
+      </div>
+      <div class="start-card">
+        <div class="start-persona">Full Picture</div>
+        <div class="start-scenario">"I want to understand the complete system."</div>
+        <div class="start-rec">Read in order: <a href="/signal/intelligence-abundance-framework.html">Intelligence Abundance</a> &rarr; <a href="/signal/ai-change-framework.html">Change Management</a> &rarr; <a href="/signal/human-capability-framework.html">Human Capability</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- When the System Is Incomplete -->
+<section class="diagnostic-section">
+  <div class="container">
+    <h2>When the System Is Incomplete</h2>
+    <p class="diagnostic-hook">Most organizations get one or two dimensions right. The symptoms below are what happens when the third is missing.</p>
+
+    <div class="diagnostic">
+      <div class="diagnostic-header">
+        <div class="diagnostic-header-cell">What it looks like</div>
+        <div class="diagnostic-header-cell">What's missing</div>
+      </div>
+
+      <div class="diagnostic-group">
+        <div class="diagnostic-group-label missing-what">Without organizational design</div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">We ran a great change program but nobody knows what we're changing into</div>
+          <div class="diagnostic-cell gap"><a href="/signal/intelligence-abundance-framework.html">The destination</a></div>
+        </div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">People are developing new skills but the org chart hasn't moved</div>
+          <div class="diagnostic-cell gap"><a href="/signal/intelligence-abundance-framework.html">The destination</a></div>
+        </div>
+      </div>
+
+      <div class="diagnostic-group">
+        <div class="diagnostic-group-label missing-how">Without change management</div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">Leadership has a beautiful vision deck but nothing is actually different six months later</div>
+          <div class="diagnostic-cell gap"><a href="/signal/ai-change-framework.html">The pathway</a></div>
+        </div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">We bought the tools, trained the people, and adoption is still under 20%</div>
+          <div class="diagnostic-cell gap"><a href="/signal/ai-change-framework.html">The pathway</a></div>
+        </div>
+      </div>
+
+      <div class="diagnostic-group">
+        <div class="diagnostic-group-label missing-who">Without people development</div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">The new structure is live but the same people are doing things the same way</div>
+          <div class="diagnostic-cell gap"><a href="/signal/human-capability-framework.html">The people</a></div>
+        </div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">AI tools are deployed everywhere and quality has gotten worse, not better</div>
+          <div class="diagnostic-cell gap"><a href="/signal/human-capability-framework.html">The people</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="playbook-cta">
+  <div class="container">
+    <p>These frameworks synthesize direct experience inside organizations attempting this transition, combined with research on human coordination, AI capability, and organizational transformation. If this resonates with what you are seeing, <a href="/#contact">I would like to hear about it</a>.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    &copy; 2026 Nathan Kling
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
