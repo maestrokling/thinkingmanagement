@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Constitutional Principles vs. Compliance Rules: AI Governance That Scales | Nathan Kling</title>
+  <meta name="description" content="The best AI governance document I've seen was two pages. The worst was forty-seven. The forty-seven-page version was thorough, compliance-friendly, and completely useless in novel situations — which is exactly where AI governance gets tested.">
+  <meta property="og:title" content="Constitutional Principles vs. Compliance Rules: AI Governance That Scales">
+  <meta property="og:description" content="A compliance document covers known scenarios and fails on novel ones. A constitutional document scales with complexity. AI moves faster than any compliance framework can update.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/frameworks/constitutional-governance/">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260315">
+  <style>
+    .framework-hero{padding:120px 0 48px;background:#fff;border-bottom:1px solid #ecedf0}
+    .framework-hero .eyebrow{font-size:.8rem;font-weight:600;color:#2563a0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+    .framework-hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:20px;max-width:680px}
+    .framework-hero .lede{font-size:1.1rem;color:#4a4a5a;max-width:620px;line-height:1.8}
+    .framework-body{padding:56px 0}
+    .framework-body .container{max-width:720px}
+    .framework-body h2{font-size:1.4rem;margin:40px 0 16px;color:#0f0f1a}
+    .framework-body p{font-size:1.05rem;line-height:1.85;color:#2a2a3a;margin-bottom:20px}
+    .failure-mode{background:#fff8f5;border:1px solid #f4c5a8;border-radius:6px;padding:24px 28px;margin:32px 0}
+    .failure-mode .label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c05a1f;margin-bottom:8px}
+    .failure-mode p{font-size:.97rem;color:#3a2a1a;margin:0;line-height:1.7}
+    .compare-block{border:1px solid #e5e7eb;border-radius:4px;padding:20px 24px;margin:16px 0}
+    .compare-block.compliance{border-left:4px solid #aaa;background:#fafafa}
+    .compare-block.compliance h3{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:#888}
+    .compare-block.constitutional{border-left:4px solid #2563a0;background:#f0f4fb}
+    .compare-block.constitutional h3{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:#2563a0}
+    .compare-block p{font-size:.95rem;margin:0;color:#2a2a3a;line-height:1.7}
+    .constitution-block{background:#fff;border:1px solid #e5e7eb;border-left:4px solid #2563a0;border-radius:4px;padding:20px 24px;margin:16px 0}
+    .constitution-block h3{font-size:.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:#2563a0}
+    .constitution-block p{font-size:.95rem;margin:0;color:#4a4a5a;line-height:1.7}
+    .practitioner-note{background:#f7f8fa;border-left:4px solid #2563a0;border-radius:0 4px 4px 0;padding:20px 24px;margin:32px 0;font-size:.97rem;color:#2a2a3a;line-height:1.75;font-style:italic}
+    .teaser-questions{background:#f0f4fb;border-radius:6px;padding:28px 32px;margin:32px 0}
+    .teaser-questions h3{font-size:1rem;font-weight:700;margin:0 0 16px;color:#0f0f1a}
+    .teaser-questions ol{margin:0;padding-left:20px}
+    .teaser-questions li{font-size:.97rem;line-height:1.7;color:#2a2a3a;margin-bottom:10px}
+    .toolkit-cta{background:#0f0f1a;color:#fff;border-radius:8px;padding:40px 44px;margin:48px 0 0;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .toolkit-cta .cta-text h3{font-size:1.2rem;font-weight:700;margin:0 0 8px;color:#fff}
+    .toolkit-cta .cta-text p{font-size:.92rem;color:#aaa;margin:0;line-height:1.6}
+    .toolkit-cta .cta-btn{display:inline-block;padding:14px 32px;background:#fff;color:#0f0f1a;border-radius:6px;font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap;flex-shrink:0}
+    .toolkit-cta .cta-btn:hover{background:#e8edf5}
+    @media(max-width:640px){.toolkit-cta{flex-direction:column;padding:28px}.framework-hero h1{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/ai-transformation-toolkit/">Toolkit</a>
+      <a href="/signal">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="framework-hero">
+  <div class="container">
+    <p class="eyebrow">Framework 5 &mdash; Intelligence Abundance Toolkit</p>
+    <h1>Constitutional Principles vs. Compliance Rules</h1>
+    <p class="lede">The best AI governance document I've seen was two pages. The worst was forty-seven. The forty-seven-page version was thorough, compliance-friendly, and completely useless in novel situations — which is exactly where AI governance gets tested.</p>
+  </div>
+</section>
+
+<section class="framework-body">
+  <div class="container">
+
+    <h2>The Failure Mode This Addresses</h2>
+    <div class="failure-mode">
+      <p class="label">What goes wrong</p>
+      <p>Governance documents too rigid to handle novel situations. AI moves faster than any compliance framework can update. A 47-page document covers every known scenario with specific rules and fails completely when something new comes up. Novel situations are exactly where AI governance gets tested.</p>
+    </div>
+
+    <h2>Compliance vs. Constitutional</h2>
+    <p>The difference isn't length. It's what the document is designed to do.</p>
+
+    <div class="compare-block compliance">
+      <h3>Compliance Rules Look Like This</h3>
+      <p>"Employees may not use AI to draft external communications without manager approval. AI-generated content must be reviewed before publication. Customer data may not be entered into unapproved AI tools." These rules cover known scenarios. They fail on novel ones. And every new AI capability creates a new novel scenario.</p>
+    </div>
+
+    <div class="compare-block constitutional">
+      <h3>Constitutional Principles Look Like This</h3>
+      <p>"We don't ship anything we wouldn't put our name on, regardless of how it was produced. Our customers' data is treated with the same care we'd want our own data treated with. We use AI to do better work, not to do less work. The quality bar doesn't move." These principles cover known and unknown scenarios. They get sharper with use.</p>
+    </div>
+
+    <h2>The Two-Page Constitution Structure</h2>
+
+    <div class="constitution-block">
+      <h3>1. Identity Anchor</h3>
+      <p>One paragraph. Who you are and the standard AI doesn't change. This is the sentence every person in your organization can use to evaluate any AI output. Example: "We produce work we'd be proud to put our name on. That standard doesn't change based on who or what produced it."</p>
+    </div>
+
+    <div class="constitution-block">
+      <h3>2. Decision Rights</h3>
+      <p>One page. Three tiers: individual discretion, manager approval, executive approval. Be specific about what goes in each tier. Ambiguity here creates the escalation problems the constitution is designed to prevent.</p>
+    </div>
+
+    <div class="constitution-block">
+      <h3>3. Quality Standards</h3>
+      <p>Three to five bullet points. Not rules about process — standards about output. What does "good enough" mean? How do you evaluate AI-generated work against the same bar you'd apply to human-generated work?</p>
+    </div>
+
+    <div class="constitution-block">
+      <h3>4. Escalation Path</h3>
+      <p>One paragraph. When someone isn't sure whether something is authorized: one person, one decision point, fast response. If the path takes more than 24 hours, it won't be used.</p>
+    </div>
+
+    <h2>The Practitioner Note</h2>
+    <div class="practitioner-note">
+      The test: could every person in your organization use this principle to make a good autonomous decision in a situation the document has never contemplated? If no, it's not a principle. It's a rule that hasn't been written yet. Write your constitution with that test in mind.
+    </div>
+
+    <h2>Three Questions Before Writing Your Constitution</h2>
+    <div class="teaser-questions">
+      <h3>Use these to assess your current governance posture:</h3>
+      <ol>
+        <li>Could every person in your organization use your current AI governance to make a good autonomous decision about a situation the document has never contemplated?</li>
+        <li>Does your governance answer "what does good AI output look like" or only "what process was followed"?</li>
+        <li>When someone isn't sure whether something is authorized, what do they do? Is there one clear, fast answer?</li>
+      </ol>
+    </div>
+
+    <h2>The Full Practitioner Tool</h2>
+    <p>The Intelligence Abundance Toolkit includes the Two-Page AI Constitution Template: a fill-in-the-blank format with annotated examples for each section, a constitutional consistency test, and guidance on how to migrate from a compliance document without losing the protections that compliance rules provide.</p>
+
+    <div class="toolkit-cta">
+      <div class="cta-text">
+        <h3>The Intelligence Abundance Toolkit</h3>
+        <p>Seven frameworks. Seven worksheets. 90-min session guide, 12-month roadmap, and 11 AI prompts. $97.</p>
+      </div>
+      <a href="https://thinkingmanagement.gumroad.com/l/intelligenceabundance" class="cta-btn">Get the Toolkit &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo">
+    <p>&copy; 2026 Nathan Kling &middot; <a href="https://thinkingmanagement.com">thinkingmanagement.com</a></p>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

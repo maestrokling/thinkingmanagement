@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What to Measure: The Anti-Metrics for AI Transformation | Nathan Kling</title>
+  <meta name="description" content="Most organizations track AI tool usage rates. High usage equals successful adoption. This metric is wrong. Some of the worst AI use looks great on usage dashboards. Measuring effort instead of capability development is the most common measurement mistake in AI transformation.">
+  <meta property="og:title" content="What to Measure: The Anti-Metrics for AI Transformation">
+  <meta property="og:description" content="High usage does not equal good outcomes. The four metrics that actually tell you whether AI transformation is working — and what to stop measuring immediately.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/frameworks/anti-metrics/">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260315">
+  <style>
+    .framework-hero{padding:120px 0 48px;background:#fff;border-bottom:1px solid #ecedf0}
+    .framework-hero .eyebrow{font-size:.8rem;font-weight:600;color:#2563a0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+    .framework-hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:20px;max-width:680px}
+    .framework-hero .lede{font-size:1.1rem;color:#4a4a5a;max-width:620px;line-height:1.8}
+    .framework-body{padding:56px 0}
+    .framework-body .container{max-width:720px}
+    .framework-body h2{font-size:1.4rem;margin:40px 0 16px;color:#0f0f1a}
+    .framework-body p{font-size:1.05rem;line-height:1.85;color:#2a2a3a;margin-bottom:20px}
+    .failure-mode{background:#fff8f5;border:1px solid #f4c5a8;border-radius:6px;padding:24px 28px;margin:32px 0}
+    .failure-mode .label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c05a1f;margin-bottom:8px}
+    .failure-mode p{font-size:.97rem;color:#3a2a1a;margin:0;line-height:1.7}
+    .metric-block{background:#fff;border:1px solid #e5e7eb;border-left:4px solid #2563a0;border-radius:4px;padding:20px 24px;margin:16px 0}
+    .metric-block h3{font-size:.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:#2563a0}
+    .metric-block p{font-size:.95rem;margin:0 0 8px;color:#2a2a3a;line-height:1.7}
+    .metric-block p:last-child{margin:0}
+    .metric-block .how-to{font-size:.88rem;color:#666;font-style:italic}
+    .stop-block{background:#fff8f5;border:1px solid #f4c5a8;border-radius:6px;padding:24px 28px;margin:32px 0}
+    .stop-block h3{font-size:.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px;color:#c05a1f}
+    .stop-block ul{margin:0;padding-left:20px}
+    .stop-block li{font-size:.95rem;color:#3a2a1a;line-height:1.7;margin-bottom:8px}
+    .teaser-questions{background:#f0f4fb;border-radius:6px;padding:28px 32px;margin:32px 0}
+    .teaser-questions h3{font-size:1rem;font-weight:700;margin:0 0 16px;color:#0f0f1a}
+    .teaser-questions ol{margin:0;padding-left:20px}
+    .teaser-questions li{font-size:.97rem;line-height:1.7;color:#2a2a3a;margin-bottom:10px}
+    .toolkit-cta{background:#0f0f1a;color:#fff;border-radius:8px;padding:40px 44px;margin:48px 0 0;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .toolkit-cta .cta-text h3{font-size:1.2rem;font-weight:700;margin:0 0 8px;color:#fff}
+    .toolkit-cta .cta-text p{font-size:.92rem;color:#aaa;margin:0;line-height:1.6}
+    .toolkit-cta .cta-btn{display:inline-block;padding:14px 32px;background:#fff;color:#0f0f1a;border-radius:6px;font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap;flex-shrink:0}
+    .toolkit-cta .cta-btn:hover{background:#e8edf5}
+    @media(max-width:640px){.toolkit-cta{flex-direction:column;padding:28px}.framework-hero h1{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/ai-transformation-toolkit/">Toolkit</a>
+      <a href="/signal">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="framework-hero">
+  <div class="container">
+    <p class="eyebrow">Framework 7 &mdash; Intelligence Abundance Toolkit</p>
+    <h1>What to Measure: The Anti-Metrics</h1>
+    <p class="lede">Most organizations track AI tool usage rates. High usage equals successful adoption. This metric is wrong. Some of the worst AI use looks great on usage dashboards. Measuring effort instead of capability development is the most common measurement mistake in AI transformation.</p>
+  </div>
+</section>
+
+<section class="framework-body">
+  <div class="container">
+
+    <h2>The Failure Mode This Addresses</h2>
+    <div class="failure-mode">
+      <p class="label">What goes wrong</p>
+      <p>Measurement systems tracking effort instead of capability development. People generating volumes of mediocre output because the tool is easy — not because they're using it effectively — show up as successful adoption. Leadership sees green dashboards. The transformation isn't working. High usage does not equal good outcomes.</p>
+    </div>
+
+    <h2>The Four Metrics That Matter</h2>
+
+    <div class="metric-block">
+      <h3>1. Iteration Quality</h3>
+      <p>Are outputs on the third attempt better than outputs on the first attempt? Improving trajectory matters more than absolute quality at any given moment. A team whose AI-augmented outputs are getting better each week is building capability. A team whose outputs are flat despite high usage is not.</p>
+      <p class="how-to">How to track: have managers score work product quality on a 1-5 scale weekly. Benchmark against prior week, not against a fixed standard. Direction, not level.</p>
+    </div>
+
+    <div class="metric-block">
+      <h3>2. Error Detection Rate</h3>
+      <p>Are people catching AI mistakes before they reach stakeholders? This skill improves with practice — but only if people are using their judgment to evaluate AI output rather than passing it through uncritically. A team with a high error detection rate is a team that has learned where AI fails in their domain.</p>
+      <p class="how-to">How to track: ask teams to log AI errors caught before submission. Make error detection visible and valued, not punitive. The goal is to make catching failures a rewarded skill.</p>
+    </div>
+
+    <div class="metric-block">
+      <h3>3. Decision Velocity</h3>
+      <p>Time from information availability to decision implementation. AI should move this number. If AI is in use but decision velocity isn't improving, something in the workflow is broken — either AI output quality is too inconsistent to trust, or the verification process is adding more time than AI is saving.</p>
+      <p class="how-to">How to track: pick 3-5 decision types your team makes regularly. Time them from trigger to implementation for one month. Repeat at months six and twelve.</p>
+    </div>
+
+    <div class="metric-block">
+      <h3>4. Escalation Frequency</h3>
+      <p>How often do teams need leadership input for decisions within their defined scope? This should decrease over time as constitutional interpretation matures. If escalation frequency is flat or increasing despite AI deployment, the constitutional principles aren't clear enough to support autonomous decision-making.</p>
+      <p class="how-to">How to track: count leadership escalations per team per week. Look for a downward trend starting around month six.</p>
+    </div>
+
+    <h2>What to Stop Measuring</h2>
+    <div class="stop-block">
+      <h3>Remove these from your AI transformation dashboard:</h3>
+      <ul>
+        <li><strong>Usage rates:</strong> measures effort, not capability. Easy to game. No relationship to outcomes.</li>
+        <li><strong>Prompt counts:</strong> same problem as usage rates.</li>
+        <li><strong>Time-saved estimates:</strong> people are notoriously bad at estimating this accurately, and it doesn't tell you whether the time saved was invested in better work.</li>
+        <li><strong>Satisfaction surveys before month 6:</strong> too early. People haven't been through The Valley yet. Satisfaction will drop before it rises. Measure at month twelve.</li>
+      </ul>
+    </div>
+
+    <h2>Three Questions Before Setting Your Measurement Plan</h2>
+    <div class="teaser-questions">
+      <h3>Use these to audit your current metrics:</h3>
+      <ol>
+        <li>Are you currently measuring usage rates and calling it adoption? What would you measure if usage rate was off the table?</li>
+        <li>Is error detection rewarded visibly in your organization, or is catching AI mistakes an invisible skill with no recognition?</li>
+        <li>Have you picked 3-5 decision types to time from trigger to implementation, so you have a pre-transformation baseline to compare against?</li>
+      </ol>
+    </div>
+
+    <h2>The Full Practitioner Tool</h2>
+    <p>The Intelligence Abundance Toolkit includes the AI Transformation Measurement Guide: a tracking template for all four metrics, baseline-setting instructions, a measurement calendar tied to the transformation timeline, and a dashboard replacement template that removes effort metrics and replaces them with capability indicators.</p>
+
+    <div class="toolkit-cta">
+      <div class="cta-text">
+        <h3>The Intelligence Abundance Toolkit</h3>
+        <p>Seven frameworks. Seven worksheets. 90-min session guide, 12-month roadmap, and 11 AI prompts. $97.</p>
+      </div>
+      <a href="https://thinkingmanagement.gumroad.com/l/intelligenceabundance" class="cta-btn">Get the Toolkit &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo">
+    <p>&copy; 2026 Nathan Kling &middot; <a href="https://thinkingmanagement.com">thinkingmanagement.com</a></p>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

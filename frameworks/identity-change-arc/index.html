@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Identity Change Arc: Why Adoption Resistance Isn't Change Resistance | Nathan Kling</title>
+  <meta name="description" content="Most AI transformation plans treat people as a training problem. They aren't. They're an identity problem. The organizations that get adoption right don't lead with capability. They lead with leverage.">
+  <meta property="og:title" content="The Identity Change Arc: Why Adoption Resistance Isn't Change Resistance">
+  <meta property="og:description" content="Most AI transformation plans treat people as a training problem. They aren't. They're an identity problem. The organizations that get adoption right lead with leverage, not capability.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/frameworks/identity-change-arc/">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260315">
+  <style>
+    .framework-hero{padding:120px 0 48px;background:#fff;border-bottom:1px solid #ecedf0}
+    .framework-hero .eyebrow{font-size:.8rem;font-weight:600;color:#2563a0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+    .framework-hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:20px;max-width:680px}
+    .framework-hero .lede{font-size:1.1rem;color:#4a4a5a;max-width:620px;line-height:1.8}
+    .framework-body{padding:56px 0}
+    .framework-body .container{max-width:720px}
+    .framework-body h2{font-size:1.4rem;margin:40px 0 16px;color:#0f0f1a}
+    .framework-body p{font-size:1.05rem;line-height:1.85;color:#2a2a3a;margin-bottom:20px}
+    .failure-mode{background:#fff8f5;border:1px solid #f4c5a8;border-radius:6px;padding:24px 28px;margin:32px 0}
+    .failure-mode .label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c05a1f;margin-bottom:8px}
+    .failure-mode p{font-size:.97rem;color:#3a2a1a;margin:0;line-height:1.7}
+    .reframe-block{border:1px solid #e5e7eb;border-radius:4px;padding:20px 24px;margin:16px 0}
+    .reframe-block.wrong{border-left:4px solid #aaa;background:#fafafa}
+    .reframe-block.wrong h3{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:#888}
+    .reframe-block.right{border-left:4px solid #2563a0;background:#f0f4fb}
+    .reframe-block.right h3{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;color:#2563a0}
+    .reframe-block p{font-size:.95rem;margin:0;color:#2a2a3a;line-height:1.7}
+    .arc-block{background:#fff;border:1px solid #e5e7eb;border-radius:4px;padding:20px 24px;margin:16px 0}
+    .arc-block.friction{border-left:4px solid #e8792a;background:#fff8f5}
+    .arc-block:not(.friction){border-left:4px solid #2563a0}
+    .arc-block h3{font-size:.9rem;font-weight:700;margin:0 0 8px;color:#0f0f1a}
+    .arc-block.friction h3{color:#c05a1f}
+    .arc-block p{font-size:.95rem;margin:0;color:#4a4a5a;line-height:1.7}
+    .practitioner-note{background:#f7f8fa;border-left:4px solid #2563a0;border-radius:0 4px 4px 0;padding:20px 24px;margin:32px 0;font-size:.97rem;color:#2a2a3a;line-height:1.75;font-style:italic}
+    .teaser-questions{background:#f0f4fb;border-radius:6px;padding:28px 32px;margin:32px 0}
+    .teaser-questions h3{font-size:1rem;font-weight:700;margin:0 0 16px;color:#0f0f1a}
+    .teaser-questions ol{margin:0;padding-left:20px}
+    .teaser-questions li{font-size:.97rem;line-height:1.7;color:#2a2a3a;margin-bottom:10px}
+    .toolkit-cta{background:#0f0f1a;color:#fff;border-radius:8px;padding:40px 44px;margin:48px 0 0;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .toolkit-cta .cta-text h3{font-size:1.2rem;font-weight:700;margin:0 0 8px;color:#fff}
+    .toolkit-cta .cta-text p{font-size:.92rem;color:#aaa;margin:0;line-height:1.6}
+    .toolkit-cta .cta-btn{display:inline-block;padding:14px 32px;background:#fff;color:#0f0f1a;border-radius:6px;font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap;flex-shrink:0}
+    .toolkit-cta .cta-btn:hover{background:#e8edf5}
+    @media(max-width:640px){.toolkit-cta{flex-direction:column;padding:28px}.framework-hero h1{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/ai-transformation-toolkit/">Toolkit</a>
+      <a href="/signal">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="framework-hero">
+  <div class="container">
+    <p class="eyebrow">Framework 4 &mdash; Intelligence Abundance Toolkit</p>
+    <h1>The Identity Change Arc</h1>
+    <p class="lede">Most AI transformation plans treat people as a training problem. They aren't. They're an identity problem. The organizations that get adoption right don't lead with capability. They lead with leverage.</p>
+  </div>
+</section>
+
+<section class="framework-body">
+  <div class="container">
+
+    <h2>The Failure Mode This Addresses</h2>
+    <div class="failure-mode">
+      <p class="label">What goes wrong</p>
+      <p>Adoption resistance misread as change resistance. When you tell a senior analyst that AI can do 70% of their work, you've told them 70% of who they are professionally is about to become irrelevant. Of course they resist. This isn't obstruction. It's identity threat. And training can't fix identity threat.</p>
+    </div>
+
+    <h2>The Reframe</h2>
+    <p>Same AI capability. Two completely different outcomes, depending on how the message lands:</p>
+
+    <div class="reframe-block wrong">
+      <h3>The Wrong Frame</h3>
+      <p>"AI can do 70% of your analytical work." Result: identity threat. The person's professional value was built on being able to process more information and make better decisions than most people. AI just changed that equation without offering a replacement identity.</p>
+    </div>
+
+    <div class="reframe-block right">
+      <h3>The Right Frame</h3>
+      <p>"Your expertise is now a direction system for AI. You decide where it looks, you evaluate what it finds, you catch what it misses. That's higher leverage than doing the analysis yourself." Same capability. Different outcome. The professional identity survives — and upgrades.</p>
+    </div>
+
+    <h2>The Six-Month Arc</h2>
+    <p>People move through this arc on a predictable timeline. The mistake is treating any phase as optional.</p>
+
+    <div class="arc-block">
+      <h3>Months 1-2: Orientation</h3>
+      <p>People understand what AI can and can't do in their specific domain. They've run their own experiments. They have a personal opinion based on experience, not fear or enthusiasm.</p>
+    </div>
+
+    <div class="arc-block friction">
+      <h3>Months 3-4: Friction</h3>
+      <p>People hit the ceiling of what AI does well and start encountering its failure modes. They get frustrated. Some get disillusioned. This is a necessary part of the arc. Don't shortcut it. People who skip the friction phase never develop genuine judgment about where AI fails.</p>
+    </div>
+
+    <div class="arc-block">
+      <h3>Months 5-6: Recalibration</h3>
+      <p>People who make it through the friction phase have developed genuine judgment about where AI adds value and where it doesn't. They're starting to build workflows that use AI for what it's good at.</p>
+    </div>
+
+    <div class="arc-block">
+      <h3>Months 7-12: Integration</h3>
+      <p>AI is a natural part of how they work. They don't think about "using AI." They think about the problem. Language shift: they stop saying "the AI" and start saying "my workflow." That shift is a real indicator of arc completion.</p>
+    </div>
+
+    <h2>The Practitioner Note</h2>
+    <div class="practitioner-note">
+      The most common mistake: treating Months 3-4 friction as a failure of adoption. It's not. It's calibration. If everyone on your team thinks AI is great at month 4, they haven't learned where it fails. That knowledge is load-bearing. Celebrate useful skepticism. When someone catches an AI error and flags it, that's the skill you want. Make it visible. Reward it explicitly.
+    </div>
+
+    <h2>Three Questions Before Planning the Arc</h2>
+    <div class="teaser-questions">
+      <h3>Use these to assess your current approach:</h3>
+      <ol>
+        <li>How are you framing AI to your team: as capability replacement or as leverage? What specific language are you using?</li>
+        <li>When team members hit the Friction phase (months 3-4), how will you distinguish normal calibration from a real problem requiring intervention?</li>
+        <li>Are you rewarding error detection — people who catch AI mistakes before they reach stakeholders? Is that skill visible and valued in your organization?</li>
+      </ol>
+    </div>
+
+    <h2>The Full Practitioner Tool</h2>
+    <p>The Intelligence Abundance Toolkit includes the Identity Transition Planning Tool: reframe scripts for common identity-threat scenarios, the arc tracking format, and the specific indicators that distinguish normal friction from adoption failure requiring intervention.</p>
+
+    <div class="toolkit-cta">
+      <div class="cta-text">
+        <h3>The Intelligence Abundance Toolkit</h3>
+        <p>Seven frameworks. Seven worksheets. 90-min session guide, 12-month roadmap, and 11 AI prompts. $97.</p>
+      </div>
+      <a href="https://thinkingmanagement.gumroad.com/l/intelligenceabundance" class="cta-btn">Get the Toolkit &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo">
+    <p>&copy; 2026 Nathan Kling &middot; <a href="https://thinkingmanagement.com">thinkingmanagement.com</a></p>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
