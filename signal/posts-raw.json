@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "type": "medium-share",
+    "title": "The EQ Gap: Why Your AI Adoption Strategy Is Failing at the Human Layer",
+    "date": "2026-03-06",
+    "activity_id": "7435724384390012929",
+    "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7435724384390012929/",
+    "medium_url": "https://medium.com/@nathankling_49918/the-eq-gap-why-your-ai-adoption-strategy-is-failing-at-the-human-layer-5b2a13b3d4ee",
+    "linkedin_intro": "So, a two-for Friday kind of day as Anthropic published research this week showing that the gap between what AI can do and what companies actually use it for is enormous. Most of the conversation focuses on the technology. I'm writing about something upstream: why that gap exists at almost every organization attempting AI transformation, and why you can't close it with better tools or more training.",
+    "full_text": "FETCH_FROM_MEDIUM",
+    "source": "Medium",
+    "keep": true
+  },
+  {
+    "id": 2,
+    "type": "friday-reflection",
+    "title": "AI Doesn't Create Your Culture. It Reveals It.",
+    "date": "2026-03-06",
+    "activity_id": "7435670564704329728",
+    "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7435670564704329728/",
+    "ted_talk": "Margaret Heffernan: Dare to Disagree",
+    "ted_url": "https://www.ted.com/talks/margaret_heffernan_dare_to_disagree",
+    "full_text": "Friday Reflection: AI Doesn't Create Your Culture. It Reveals It.\n\nA Perceptyx survey of more than 2,800 employees found organizations with structured AI adoption are 7.9 times more likely to see AI positively impact workplace culture. One in three employees still reports AI has negatively affected their culture regardless of policy. The same technology. Radically different outcomes. The difference isn't the AI.\n\n1. AI Amplifies What's Already There: Columbia Business School and BCG found employee-centric organizations are seven times more likely to report effective AI adoption. AI enters a culture and acts as mirror and megaphone simultaneously. Healthy cultures get healthier. Dysfunctional ones accelerate. Organizations treating AI as a culture fix are running the causality backwards.\n\n2. The Change Absorption Gap: Harris Poll research found organizations averaged nearly three major changes in the last two years, while employees can realistically absorb one to two. AI is compounding pressure on cultures already stretched past recovery capacity. Leadership keeps adding. The culture cannot keep absorbing.\n\n3. Knowledge Hiding Is a Cultural Symptom: Research in Frontiers in Psychology found that when employees perceive AI as a threat to their value, they deliberately hide knowledge from colleagues to protect competitive advantage. This isn't selfishness \u2014 it's a rational response to cultures that never made it safe to admit what you don't know. AI accelerates knowledge hoarding where performance theater is rewarded over honest signal.\n\n4. The Leadership Contagion Effect: BetterUp and Stanford found that when managers model agency and optimism toward AI, direct reports are 1.5 times more likely to use AI and nearly three times as likely to share that optimism. Culture travels through behavior, not policy. The AI culture you get is a function of what your managers are modeling \u2014 which is a function of what they see above them.\n\n5. Structured Adoption Reflects Cultural Health \u2014 It Doesn't Create It: Perceptyx found organizations with leadership-driven AI adoption were 1.4 times more likely to report senior management communicates a clear vision. The governance isn't causing the trust \u2014 it's evidence of trust that already existed. The culture has to come first.\n\nAI transformation is a Rorschach test for organizational culture. What people see in it \u2014 opportunity or threat, investment or replacement \u2014 is almost entirely determined by the culture they were living in before the model arrived.\n\nWhat to Watch: \"Dare to Disagree\" by Margaret Heffernan explores why cultures that suppress uncomfortable truths become dangerous exactly when AI raises the stakes.\n\nWhat's your take: What has AI revealed about your culture that wasn't fully visible before?",
+    "source": "Friday Reflection",
+    "keep": true
+  },
+  {
+    "id": 3,
+    "type": "medium-share",
+    "title": "AI That Sticks",
+    "date": "2026-03-04",
+    "activity_id": "7434972181824094209",
+    "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7434972181824094209/",
+    "medium_url": "https://medium.com/@nathankling_49918/ai-that-sticks-2021ba2d4dae",
+    "linkedin_intro": "Goldman Sachs reported that AI contributed basically zero to GDP last year. Most of the conversation about that number focuses on the technology. I'm writing about something upstream of it: why most AI transformations fail before the tools ever get a chance to work, and what the organizations that actually get it right are doing differently. There are two gaps most organizations never close before they deploy. Neither one is a technology question. Worth a read if you're leading teams through an AI transition.",
+    "full_text": "FETCH_FROM_MEDIUM",
+    "source": "Medium",
+    "keep": true
+  },
+  {
+    "id": 4,
+    "type": "friday-reflection",
+    "title": "What AI Can't Fix (Because You Broke It First)",
+    "date": "2026-02-28",
+    "activity_id": "7433133844997947392",
+    "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7433133844997947392/",
+    "ted_talk": "How to Build (and Rebuild) Trust by Frances Frei",
+    "ted_url": "https://www.youtube.com/watch?v=pVeq-0dIqpk",
+    "full_text": "Friday Reflection: What AI Can't Fix (Because You Broke It First)\n\nDeloitte's TrustID Index found that trust in company-provided AI tools fell 31% between May and July 2025. Trust in agentic AI systems dropped 89% in the same period. Organizations are diagnosing this as an AI problem. It isn't. It's a trust problem that existed long before the first model was deployed.\n\n1. The Debt Preceded the Deployment: BetterUp's survey of more than 200,000 US workers found employees' comfort raising concerns to leadership declined quarter over quarter since 2020 \u2014 years before AI arrived at scale. Less than half of employees trust their senior leaders, per a 2025 Gartner survey. You can't borrow against trust you haven't built.\n\n2. Employees Don't Trust AI Because They Don't Trust Leaders: HBR research makes the connection explicit: employee trust in AI reflects broader confidence in leadership. Accenture found 95% of employees value working with AI, but don't trust organizational leaders to implement it thoughtfully. When leaders haven't earned the benefit of the doubt, AI becomes another source of suspicion, not a tool for empowerment.\n\n3. The Transparency Asymmetry: Organizations ask employees to be open about AI usage, workflow gaps, and capability deficits \u2014 while remaining opaque about how AI will affect roles and futures. Stanford's 2025 Foundation Model Transparency Index found AI companies average just 40 out of 100 on transparency, down from 58 in 2024. The ask for openness flows in one direction. Employees notice.\n\n4. The Cost of Unacknowledged Fear: The Edelman Trust Barometer found 61% of employees worry technology will make their jobs obsolete, yet only 34% say their employer is doing enough to prepare them. When leaders don't acknowledge the fear, employees don't disappear it. They route it underground into resistance and quiet non-compliance with every AI initiative that follows.\n\n5. Trust Has a Financial Floor: BetterUp research found a 10% decline in trust can cut financial performance by as much as $115 million for a $500 million company over four years. Trust is not a cultural nicety. It is load-bearing infrastructure, and most organizations are attempting AI transformation on a foundation they've been quietly undermining for years.\n\nAI doesn't create trust deficits. It makes existing ones impossible to ignore. The organizations that succeed aren't the ones with the best models \u2014 they're the ones that did the harder, quieter work of earning trust before they needed to spend it.\n\nWhat to Watch: \"How to Build (and Rebuild) Trust\" by Frances Frei is the clearest framework for understanding why trust breaks and what restoring it actually requires.\n\nWhat's your take: Is your organization building AI adoption on top of a trust foundation that was already cracked?",
+    "source": "Friday Reflection",
+    "keep": true
+  },
+  {
+    "id": 5,
+    "type": "medium-share",
+    "title": "The Doom Loop Gets the Headlines. Here's What I'm Actually Seeing.",
+    "date": "2026-02-24",
+    "activity_id": "7432082906438729728",
+    "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:activity:7432082906438729728/",
+    "medium_url": "https://medium.com/@nathankling_49918/the-doom-loop-gets-the-headlines-heres-what-i-m-actually-seeing-d24794e3efcf",
+    "linkedin_intro": "I wrote something longer this week. The Kobeissi Letter made a compelling case that the AI doom loop is the wrong frame: abundance is more likely than collapse. They're probably right. But they're writing from the market level. I'm writing from the ground: what AI adoption actually looks like inside enterprise organizations, why most companies are moving too slowly rather than being disrupted too fast, and what the \"abundance\" scenario actually requires at the organizational level. Worth a read if you're leading teams through this transition.",
+    "full_text": "FETCH_FROM_MEDIUM",
+    "source": "Medium",
+    "keep": true
+  }
+]

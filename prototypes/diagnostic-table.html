@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diagnostic Table Prototype</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.75;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      padding: 60px 28px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    a { color: #2563a0; text-decoration: none; font-weight: 600; }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f0f1a;
+      margin-bottom: 8px;
+    }
+    .section-hook {
+      font-size: 1.05rem;
+      color: #4a4a5a;
+      margin-bottom: 32px;
+      max-width: 680px;
+      line-height: 1.8;
+    }
+
+    /* === Diagnostic Table === */
+    .diagnostic {
+      max-width: 720px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .diagnostic-header {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      background: #f7f8fa;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    .diagnostic-header-cell {
+      padding: 12px 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #666;
+      border-right: 1px solid #e5e7eb;
+    }
+    .diagnostic-header-cell:last-child { border-right: none; }
+
+    .diagnostic-group {
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .diagnostic-group:last-child { border-bottom: none; }
+
+    .diagnostic-group-label {
+      padding: 14px 20px 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: #fafbfc;
+      border-bottom: 1px solid #f0f1f3;
+    }
+    .diagnostic-group-label.missing-what { color: #2563a0; }
+    .diagnostic-group-label.missing-how  { color: #7c3aed; }
+    .diagnostic-group-label.missing-who  { color: #059669; }
+
+    .diagnostic-row {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      border-bottom: 1px solid #f0f1f3;
+    }
+    .diagnostic-group .diagnostic-row:last-child { border-bottom: none; }
+
+    .diagnostic-cell {
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      color: #3a3a4a;
+      line-height: 1.55;
+      border-right: 1px solid #f0f1f3;
+    }
+    .diagnostic-cell:last-child { border-right: none; }
+
+    .diagnostic-cell.symptom {
+      font-style: italic;
+      color: #555;
+    }
+    .diagnostic-cell.symptom::before {
+      content: '"';
+    }
+    .diagnostic-cell.symptom::after {
+      content: '"';
+    }
+
+    .diagnostic-cell.gap {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #0f0f1a;
+      display: flex;
+      align-items: center;
+    }
+    .diagnostic-cell.gap a {
+      font-size: 0.85rem;
+    }
+
+    /* === Mobile === */
+    @media (max-width: 600px) {
+      body { padding: 40px 20px; }
+      .diagnostic-header { display: none; }
+      .diagnostic-row {
+        grid-template-columns: 1fr;
+        padding: 12px 20px;
+        gap: 6px;
+      }
+      .diagnostic-cell {
+        padding: 0;
+        border: none;
+      }
+      .diagnostic-cell.gap {
+        font-size: 0.82rem;
+        color: #2563a0;
+      }
+      .diagnostic-cell.gap::before {
+        content: '→ Missing: ';
+        color: #999;
+        font-weight: 500;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h2>When the System Is Incomplete</h2>
+    <p class="section-hook">Most organizations get one or two dimensions right. The symptoms below are what happens when the third is missing.</p>
+
+    <div class="diagnostic">
+      <div class="diagnostic-header">
+        <div class="diagnostic-header-cell">What it looks like</div>
+        <div class="diagnostic-header-cell">What's missing</div>
+      </div>
+
+      <!-- Group: Missing Organizational Design -->
+      <div class="diagnostic-group">
+        <div class="diagnostic-group-label missing-what">Without organizational design</div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">We ran a great change program but nobody knows what we're changing into</div>
+          <div class="diagnostic-cell gap"><a href="/signal/intelligence-abundance-framework.html">The destination</a></div>
+        </div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">People are developing new skills but the org chart hasn't moved</div>
+          <div class="diagnostic-cell gap"><a href="/signal/intelligence-abundance-framework.html">The destination</a></div>
+        </div>
+      </div>
+
+      <!-- Group: Missing Change Pathway -->
+      <div class="diagnostic-group">
+        <div class="diagnostic-group-label missing-how">Without change management</div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">Leadership has a beautiful vision deck but nothing is actually different six months later</div>
+          <div class="diagnostic-cell gap"><a href="/signal/ai-change-framework.html">The pathway</a></div>
+        </div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">We bought the tools, trained the people, and adoption is still under 20%</div>
+          <div class="diagnostic-cell gap"><a href="/signal/ai-change-framework.html">The pathway</a></div>
+        </div>
+      </div>
+
+      <!-- Group: Missing People Development -->
+      <div class="diagnostic-group">
+        <div class="diagnostic-group-label missing-who">Without people development</div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">The new structure is live but the same people are doing things the same way</div>
+          <div class="diagnostic-cell gap"><a href="/signal/human-capability-framework.html">The people</a></div>
+        </div>
+        <div class="diagnostic-row">
+          <div class="diagnostic-cell symptom">AI tools are deployed everywhere and quality has gotten worse, not better</div>
+          <div class="diagnostic-cell gap"><a href="/signal/human-capability-framework.html">The people</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
