@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provenance | Nathan Kling</title>
+  <meta name="description" content="Provenance is an architectural layer specification for cross-layer attribution in AI systems. Position piece available; architecture document in development.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Provenance | Nathan Kling">
+  <meta property="og:description" content="Provenance is an architectural layer specification for cross-layer attribution in AI systems. Position piece available; architecture document in development.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/provenance/">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://thinkingmanagement.com/provenance/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260315">
+  <style>
+    .provenance-hero{padding:120px 0 56px;background:#fff;border-bottom:1px solid #ecedf0}
+    .provenance-hero h1{font-size:2.6rem;line-height:1.2;margin-bottom:20px;max-width:680px}
+    .provenance-hero .lede{font-size:1.1rem;color:#4a4a5a;max-width:620px;line-height:1.8}
+    .provenance-section{padding:64px 0}
+    .provenance-section + .provenance-section{border-top:1px solid #ecedf0;padding-top:56px}
+    .provenance-section h2{font-size:1.3rem;font-weight:700;color:#0f0f1a;margin:0 0 20px}
+    .provenance-section p{font-size:1rem;color:#333;line-height:1.8;max-width:680px;margin:0 0 16px}
+    .artifact-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:28px 28px 24px;max-width:680px;margin:0 0 20px}
+    .artifact-card .artifact-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2563a0;margin-bottom:8px}
+    .artifact-card h3{font-size:1.1rem;font-weight:700;color:#0f0f1a;margin:0 0 10px;line-height:1.3}
+    .artifact-card p{font-size:.9rem;color:#666;line-height:1.65;margin:0 0 16px}
+    .artifact-card a{font-size:.9rem;font-weight:600;color:#2563a0;text-decoration:none}
+    .artifact-card a:hover{text-decoration:underline}
+    .artifact-card.coming{background:#f9fafb;border-color:#e5e7eb}
+    .artifact-card.coming h3{color:#4a4a5a}
+    .artifact-card.coming .artifact-label{color:#888}
+    @media(max-width:680px){.provenance-hero h1{font-size:1.9rem}}
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/ai-transformation-toolkit/">Toolkit</a>
+      <a href="/frameworks/">Frameworks</a>
+      <a href="/provenance/" class="active">Provenance</a>
+      <a href="/signal">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="provenance-hero">
+  <div class="container">
+    <h1>Provenance</h1>
+    <p class="lede">An architectural layer specification for cross-layer attribution in AI systems.</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="provenance-section">
+  <div class="container">
+    <p>Most AI governance work treats the audit trail as documentation produced about the system. Provenance treats it as a property of the system. The distinction is structural: in an environment where AI agents take thousands of actions per day, governance latency that scales with human review becomes the binding constraint on what an organization can do safely. The substrate that makes every action, decision, and artifact reconstructable, attributable, and reversible at the layer where they happen is the layer the AI stack has been missing.</p>
+    <p>Provenance is a layered architecture under active development. The position piece below stakes the case for the layer and engages the adjacent literature directly. The architecture document, which specifies the layer in implementable detail, is in development and will publish in late summer 2026.</p>
+  </div>
+</section>
+
+<!-- Current Artifacts -->
+<section class="provenance-section">
+  <div class="container">
+    <h2>Current artifacts</h2>
+    <div class="artifact-card">
+      <div class="artifact-label">Position piece &middot; May 2026</div>
+      <h3>Provenance: The Layer the AI Stack Has Been Missing</h3>
+      <p>Identity, action, artifact, and decision are being argued separately. The integration is the missing layer.</p>
+      <a href="/signal/provenance-the-missing-layer.html">Read the position piece &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- What's Coming -->
+<section class="provenance-section">
+  <div class="container">
+    <h2>What's coming</h2>
+    <div class="artifact-card coming">
+      <div class="artifact-label">Architecture document &middot; Target: late August 2026</div>
+      <h3>Provenance: A Layer Specification for Cross-Layer Attribution in AI Systems</h3>
+      <p>The layer specification: four layers, interface contracts, cryptographic binding model, regulatory mapping, and a reference implementation sketch. In active development.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Project Context -->
+<section class="provenance-section">
+  <div class="container">
+    <h2>Project context</h2>
+    <p>Provenance is sibling work to The Lattice, a foundational paper on organizational design in the intelligence abundance era. The Lattice describes the organizational form that AI leverage requires. Provenance is the structural substrate that form depends on. The two projects publish independently and reference each other directly.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="provenance-section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Questions, critiques, or collaboration interest: <a href="mailto:nathan@thinkingmanagement.com">nathan@thinkingmanagement.com</a>.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo">
+    <p>&copy; 2026 Nathan Kling &middot; <a href="https://thinkingmanagement.com">thinkingmanagement.com</a></p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
