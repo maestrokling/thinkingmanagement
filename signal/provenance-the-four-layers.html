@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provenance: The Four Layers | Signal | Nathan Kling</title>
+  <meta name="description" content="Article 12 of the EU AI Act takes effect August 2026. Most enterprise AI governance cannot satisfy it. Identity, action, artifact, and decision must be captured at the layer where they happen.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Provenance: The Four Layers">
+  <meta property="og:description" content="Article 12 of the EU AI Act takes effect August 2026. Most enterprise AI governance cannot satisfy it. Identity, action, artifact, and decision must be captured at the layer where they happen.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/signal/provenance-the-four-layers.html">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Provenance: The Four Layers">
+  <meta name="twitter:description" content="Article 12 of the EU AI Act takes effect August 2026. Most enterprise AI governance cannot satisfy it. Identity, action, artifact, and decision must be captured at the layer where they happen.">
+  <meta name="twitter:image" content="https://thinkingmanagement.com/img/headshot.png">
+
+  <link rel="canonical" href="https://thinkingmanagement.com/signal/provenance-the-four-layers.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260308e">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Provenance: The Four Layers",
+    "description": "Article 12 of the EU AI Act takes effect August 2026. Most enterprise AI governance cannot satisfy it. Identity, action, artifact, and decision must be captured at the layer where they happen.",
+    "url": "https://thinkingmanagement.com/signal/provenance-the-four-layers.html",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Nathan Kling",
+        "url": "https://thinkingmanagement.com"
+      },
+      {
+        "@type": "Person",
+        "name": "Ben Fisher"
+      }
+    ],
+    "publisher": {
+      "@type": "Person",
+      "name": "Nathan Kling",
+      "url": "https://thinkingmanagement.com"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/provenance/">Provenance</a>
+      <a href="/signal" class="active">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Post Header -->
+<section class="post-header">
+  <div class="container">
+    <h1>Provenance: The Four Layers</h1>
+    <p class="post-meta"><span class="source-tag">Technical Companion</span> &middot; Kling &amp; Fisher &middot; May 2026</p>
+    <p class="post-subtitle"><em>A technical companion to the position piece. The architecture document follows.</em></p>
+  </div>
+</section>
+
+<!-- Post Body -->
+<section class="post-body">
+  <div class="container">
+    <p>Article 12 of the EU AI Act takes effect for high-risk AI systems in August 2026. The text is short and the demand is large: high-risk systems must produce automatic logs over their full lifetime, with traceability sufficient to identify risk situations, support post-market monitoring, and enable ongoing operational oversight. Regulators will not be satisfied by a logging product. They will be looking for the ability to reconstruct what happened, attribute it correctly, and act on it. Most enterprise AI governance, as it is currently being built, cannot do this.</p>
+    <p>The reason is structural. Governance is being built as a wrapper around AI systems. Policies get written. Risk assessments get conducted. Logs get captured by observability systems that were designed to monitor uptime, not to attribute decisions. Humans review periodically and sign off. When an audit comes, the auditor reconstructs what happened from interviews, log files, and inference. This worked when AI was a tool used by humans who remained the actors. It does not work when AI agents are themselves taking thousands of actions per day, because each order of magnitude of agent activity widens the gap between what the wrapper documents and what the system actually did.</p>
+    <p>The position piece named the missing structural element. This addendum names what it has to capture: four things, recorded at the layer where they happen, not reconstructed afterward from logs.</p>
+
+    <p class="section-heading">Identity, action, artifact, decision</p>
+    <p>Identity is who is acting, and under whose authority. Every actor in the system, human or agent, has a verifiable identity and a clear chain of delegation. The agent that drafts your contract is acting under the authority of the human who invoked it, with a defined scope and a time bound on that authority. Service accounts shared between humans and agents are not allowed; they are the most common failure mode in agent audits.</p>
+    <p>Action is what got done, in what context. Each meaningful event records the actor, the timestamp, the inputs that shaped the output, the model or rule version in effect, the policy that authorized it, and the reasoning trace that produced it. The reasoning trace matters because agents do not just execute; they decide. Without the trace, you cannot reconstruct why a decision came out the way it did, only that it did.</p>
+    <p>Artifact is what got produced, traceable back to its sources. Every document, every code commit, every model output, every status report carries a tamper-evident manifest naming who contributed, what sources were drawn on, and what AI involvement shaped the work. This is the C2PA pattern, which now ships in cameras and creative tools and is being mandated for AI-generated content under the EU AI Act. Provenance extends the pattern from media to the full range of enterprise artifacts.</p>
+    <p>Decision is who shaped the choice, whose judgment was weighted, who was in the room and who was not, what alternatives were considered, and what policy framework governed the call. Identity, action, and artifact have published precedent in the field; identity work has been most active at companies like Arion Research, action provenance has been argued by SVRN, and the artifact pattern is C2PA. The decision layer is the part that has not been built. It is also the part that matters most for what an organization can do with AI leverage.</p>
+
+    <p class="section-heading">Why the decision layer is the one that matters</p>
+    <p>A logging system can tell you what an AI system did. It cannot tell you who decided. In an organization where humans were the actors and AI was a tool, this distinction did not matter much; the action and the decision were the same thing, and the logging captured both. In an organization where agents take thousands of actions a day under human authority that was delegated upstream, the action and the decision come apart. An agent declines a loan application. The action is logged. The decision was made by the policy framework that was set six months ago by a committee whose composition is not in the log, whose dissenting voices are not in the log, and whose unrecorded conversation produced a policy the agent now applies at scale.</p>
+    <p>This is where AI leverage either becomes a force for inclusion or a force for compounding exclusion. The same agent that processes a thousand loan applications a day can apply the policy committee's blind spots a thousand times a day, and an audit of the actions will find no fault because the actions executed the policy as written. The fault is in the decision that produced the policy, and that decision is not in the action layer. It is in a different layer that most governance work has not named.</p>
+    <p>The decision layer captures what the action layer cannot. Who was in the room when the policy was set. Whose judgment was sought, and whose was routed around. What alternatives were considered. What concerns were raised and how they were resolved. The narrative is structured enough to query and to audit; it is not reduced to a checklist that erases the social texture of how the decision actually got made.</p>
+    <p>No one in the field has built this. It is the structural commitment that makes the equity case operational rather than aspirational. An AI-leverage organization either captures the social architecture of its decisions or it routes around the people whose judgment was historically excluded. The decision layer is what keeps the leverage auditable against the equity claim.</p>
+
+    <p class="section-heading">Why these four cannot be split across products</p>
+    <p>The integrity of the whole depends on the integration of the parts. A substrate that captures identity but not decision is a directory service. A substrate that captures action but not identity is a logging product. A substrate that binds artifacts but does not model decision is a metadata system. Each of those exists today, sold by different vendors, addressed by different budgets. None of them, on their own, can satisfy Article 12.</p>
+    <p>Article 12 requires the auditor to reconstruct what happened across all four. Who was acting. What they did. What they produced. Why they decided to do it that way. Reconstruction requires that the four layers were captured together, signed together, and queryable as a single record. Anything less leaves the auditor inferring across systems that were never designed to talk to each other, which is exactly the failure mode the regulation was written to prevent.</p>
+    <p>This is also the reason a governance product cannot be the substrate. Governance products operate on top of the substrate the way applications operate on top of TCP/IP. A governance product can use the substrate to enforce policies, generate reports, and demonstrate compliance. The substrate itself records what happened with enough fidelity that any party with the right authority can reconstruct it. Putting governance and the substrate in the same product turns the substrate into a wrapper, and the wrapper is the thing that fails.</p>
+
+    <p class="section-heading">Where the layer anchors, and where it extends</p>
+    <p>Two questions any careful reader will ask after the four layers are named. The first is where the chain of trust ultimately anchors. The second is what happens when an action crosses organizational boundaries.</p>
+    <p>Every trust claim eventually has to rest on something that is trusted without being verified by something else. In a software-only system, that something is a key stored somewhere on disk, in a process whose integrity is assumed but cannot be checked from outside. Both assumptions break under attack, and they break much harder in the agent context where attackers have more attack surfaces than they did when humans were the actors. The substrate cannot hold its integrity guarantees with software trust alone.</p>
+    <p>The anchor has to be in hardware. Modern servers have a Trusted Platform Module, a baseboard management controller with measured boot, or a silicon root of trust that holds keys the rest of the system cannot reach and verifies firmware that the rest of the system cannot modify. The standards body of work here is mature, with NIST Special Publication 800-193 setting the protect-detect-recover principles for platform firmware resiliency. Provenance composes upward from this floor. An agent's identity is verifiable because the orchestration system signed it. The orchestration system's signing key is verifiable because the platform attests to it. The platform's attestation is verifiable because the silicon root of trust anchors the chain. Without the anchor, the chain is decorative.</p>
+    <p>A different question arises when the action chain crosses organizational boundaries. An agent at one company invokes a tool at another, which calls a model at a third. Three substrates are involved. None of them has a complete view, and none of them has a reason to take the others on faith. This is where distributed ledger technology has a real role, though not the role it is often assumed to have. The obvious move is to use a public blockchain as a global audit log. That move is wrong. It contradicts the data sovereignty commitment, has poor privacy properties, and aggregates data exactly where the architecture is meant to prevent aggregation.</p>
+    <p>What works is a permissioned ledger that records cryptographic commitments, not content. Each substrate keeps its own data inside its own boundary. Each substrate signs an attestation about events at the boundary where they cross into another organization's substrate. The attestations are recorded on a ledger that all participating organizations can read and verify. The ledger is small because it stores hashes and signatures rather than events. Each organization's data sovereignty holds because the ledger never sees the underlying content. The chain across organizations holds because every link is cryptographically committed, and tampering with any link breaks the chain.</p>
+    <p>This is the same pattern C2PA uses to bind artifacts to their provenance, applied one level up to bind organizational substrates to each other. The technology exists. Hyperledger Fabric, Hyperledger Indy, and the patterns underlying W3C Decentralized Identifiers and Verifiable Credentials are already shipping in production. The work is fitting them to this purpose, not inventing them.</p>
+
+    <p class="section-heading">What the architecture document specifies that this piece does not</p>
+    <p>This addendum names the four layers, the integration claim, and the architectural commitments at the hardware floor and the cross-organizational ceiling. It does not specify the interface between the substrate and the layers it serves. It does not specify the cryptographic binding model in implementable detail, including how the hardware attestation chain composes with software credentials and ledger commitments. It does not include a reference implementation sketch. Those belong to the architecture document, which is in active development and publishes in late August.</p>
+    <p>What this piece does is establish the recognizable shape. A reader who understands these four components can evaluate any competing proposal and recognize whether it is implementing the integrated layer or implementing a narrower thing that calls itself the layer. That recognition is what the field needs before August 2026, because the alternative is that enterprises buy governance products that pass the first audit and fail the second.</p>
+    <p>The architecture document specifies how to build it. This piece names what to build.</p>
+
+    <p class="post-bio"><em>Nathan Kling and Ben Fisher write on AI transformation, organizational design, and the human layer that determines whether transformations succeed or stall. More at <a href="https://thinkingmanagement.com/">thinkingmanagement.com</a>. The architecture document referenced here and <a href="https://thinkingmanagement.com/">The Lattice</a>, a foundational paper on organizational design in the intelligence abundance era, are sibling works in active development.</em></p>
+  </div>
+</section>
+
+<!-- Post Footer -->
+<section class="post-footer">
+  <div class="container">
+    <a href="/signal" class="back-link">&larr; Back to Signal</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo"><p>&copy; 2026 Nathan Kling</p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
