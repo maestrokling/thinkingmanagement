@@ -34,4 +34,6 @@
   <url><loc>https://thinkingmanagement.com/frameworks/constitutional-governance/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://thinkingmanagement.com/frameworks/transformation-timeline/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://thinkingmanagement.com/frameworks/anti-metrics/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://thinkingmanagement.com/provenance/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thinkingmanagement.com/signal/provenance-the-missing-layer.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
