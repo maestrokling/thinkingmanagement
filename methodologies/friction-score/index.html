@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Friction Score | Nathan Kling</title>
+  <meta name="description" content="A five-level scale for measuring the gap between what a company says about user agency and what the user actually experiences. The methodology behind Cancel Freely and DeleteFreely.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Friction Score | Nathan Kling">
+  <meta property="og:description" content="A five-level scale for measuring the gap between what a company says about user agency and what the user actually experiences.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/headshot.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/methodologies/friction-score/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Friction Score | Nathan Kling">
+  <meta name="twitter:description" content="A five-level scale for measuring the gap between what a company says about user agency and what the user actually experiences.">
+
+  <link rel="canonical" href="https://thinkingmanagement.com/methodologies/friction-score/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260525">
+  <style>
+    .friction-hero{padding:120px 0 56px;background:#fff;border-bottom:1px solid #ecedf0}
+    .friction-hero h1{font-size:2.6rem;line-height:1.2;margin-bottom:20px;max-width:680px}
+    .friction-hero .lede{font-size:1.1rem;color:#4a4a5a;max-width:680px;line-height:1.8;margin:0 0 16px}
+    .friction-section{padding:56px 0;border-bottom:1px solid #ecedf0}
+    .friction-section:last-of-type{border-bottom:none}
+    .friction-section h2{font-size:1.3rem;font-weight:700;color:#0f0f1a;margin:0 0 12px}
+    .friction-section .section-intro{font-size:1rem;color:#4a4a5a;max-width:680px;line-height:1.75;margin:0 0 32px}
+    .friction-section p{font-size:1rem;color:#333;line-height:1.8;max-width:680px;margin:0 0 16px}
+    .scale-list{list-style:none;padding:0;margin:0;max-width:680px}
+    .scale-item{border:1px solid #e5e7eb;border-radius:8px;padding:20px 24px;margin:0 0 12px;background:#fff}
+    .scale-item .scale-level{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2563a0;margin-bottom:6px}
+    .scale-item .scale-name{font-size:1rem;font-weight:700;color:#0f0f1a;margin:0 0 8px}
+    .scale-item .scale-desc{font-size:.9rem;color:#555;line-height:1.65;margin:0}
+    .impl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:0}
+    .impl-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:28px 28px 24px;text-decoration:none;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+    .impl-card:hover{border-color:#2563a0;box-shadow:0 4px 16px rgba(37,99,160,.08)}
+    .impl-card h3{font-size:1.1rem;font-weight:700;color:#0f0f1a;margin:0 0 10px;line-height:1.3}
+    .impl-card .impl-desc{font-size:.9rem;color:#666;line-height:1.65;margin:0 0 16px;flex:1}
+    .impl-card .impl-link{font-size:.85rem;font-weight:600;color:#2563a0}
+    .contact-block{max-width:680px}
+    .contact-block a{color:#2563a0}
+    @media(max-width:680px){.friction-hero h1{font-size:1.9rem}.impl-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/frameworks/">Practice</a>
+      <a href="/provenance/">Provenance</a>
+      <a href="/signal">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="friction-hero">
+  <div class="container">
+    <h1>The Friction Score</h1>
+    <p class="lede">A five-level scale for measuring the gap between what a company says about user agency and what the user actually experiences.</p>
+    <p class="lede">Companies tell users that cancellation is easy. The user experience tells a different story. Companies tell users they honor data requests. The actual process is designed to make users give up. The Friction Score names the gap, measures it on a five-level scale, and publishes the result so the user knows what they are walking into before they start.</p>
+    <p class="lede">The methodology is domain-agnostic. It was developed for subscription cancellation and is currently being extended to personal data requests. It applies to any domain where a company's stated policy and the user's lived experience diverge in ways that benefit the company.</p>
+  </div>
+</section>
+
+<!-- The Scale -->
+<section class="friction-section">
+  <div class="container">
+    <h2>The Scale</h2>
+    <p class="section-intro">Five levels, anchored to user experience rather than company intent. Each level describes what the user actually has to do, not what the policy claims is possible.</p>
+
+    <ul class="scale-list">
+      <li class="scale-item">
+        <div class="scale-level">Level 1</div>
+        <div class="scale-name">Frictionless</div>
+        <p class="scale-desc">The user can complete the action in one or two clicks from a logged-in state, without speaking to anyone, without explaining themselves, and without being routed through a retention flow.</p>
+      </li>
+      <li class="scale-item">
+        <div class="scale-level">Level 2</div>
+        <div class="scale-name">Mild Friction</div>
+        <p class="scale-desc">The user can complete the action self-service, but the path is buried, requires more than two steps, or includes a single retention interstitial that can be dismissed.</p>
+      </li>
+      <li class="scale-item">
+        <div class="scale-level">Level 3</div>
+        <div class="scale-name">Moderate Friction</div>
+        <p class="scale-desc">The user must engage with a retention flow, answer questions about why they are leaving, or navigate multiple confirmation screens. The path remains self-service but the company has made it deliberately slower.</p>
+      </li>
+      <li class="scale-item">
+        <div class="scale-level">Level 4</div>
+        <div class="scale-name">High Friction</div>
+        <p class="scale-desc">The user must contact the company directly through chat, phone, or email. Self-service is not available. The retention conversation is mandatory and the company controls the pace.</p>
+      </li>
+      <li class="scale-item">
+        <div class="scale-level">Level 5</div>
+        <div class="scale-name">Adversarial</div>
+        <p class="scale-desc">The company actively obstructs the action. Common patterns include phone-only cancellation with limited hours, retention agents trained to refuse, repeated authentication challenges, or paths that loop the user back to the start.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Current Implementations -->
+<section class="friction-section">
+  <div class="container">
+    <h2>Current implementations</h2>
+
+    <div class="impl-grid">
+
+      <a href="https://cancelfreely.com" class="impl-card" target="_blank" rel="noopener">
+        <h3>Cancel Freely</h3>
+        <p class="impl-desc">The first public implementation of the Friction Score. More than two hundred services scored for subscription cancellation, with dark pattern documentation alongside each entry. Open source, no data collection, free.</p>
+        <span class="impl-link">Visit Cancel Freely &rarr;</span>
+      </a>
+
+      <a href="https://deletefreely.com" class="impl-card" target="_blank" rel="noopener">
+        <h3>DeleteFreely</h3>
+        <p class="impl-desc">The second implementation. Applies the Friction Score to personal data requests under GDPR, CCPA, CPRA, and similar regimes. The Data Request Friction Score adapts the five-level scale to the specific shape of data deletion and access workflows, and the site ships alongside copy-ready templates and jurisdiction-specific rights guides.</p>
+        <span class="impl-link">Visit DeleteFreely &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why This Exists -->
+<section class="friction-section">
+  <div class="container">
+    <h2>Why this exists</h2>
+    <p>The gap between stated policy and lived user experience is one of the most reliable places to look for where a company's interests have quietly diverged from its customers'. Most measurement frameworks for consumer protection score what companies claim. The Friction Score scores what users encounter. The two numbers are almost never the same, and the difference between them is the methodology's whole reason for existing.</p>
+    <p>The methodology is published openly. Anyone is free to apply it to a new domain, fork the scale, or build a directory of their own. Methodologies travel; implementations stay local. Both matter.</p>
+    <p>The Friction Score is one of several methodologies in the practice. The others, along with the implementations that prove them, live on the <a href="/frameworks/">Practice page</a>.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="friction-section">
+  <div class="container">
+    <div class="contact-block">
+      <h2>Contact</h2>
+      <p>Questions, critiques, and proposed extensions are welcome. Write to <a href="mailto:nathan@thinkingmanagement.com">nathan@thinkingmanagement.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo">
+    <p>&copy; 2026 Nathan Kling &middot; <a href="https://thinkingmanagement.com">thinkingmanagement.com</a></p>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
