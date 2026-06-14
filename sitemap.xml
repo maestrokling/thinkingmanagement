@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://thinkingmanagement.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://thinkingmanagement.com/ai-transformation-toolkit/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://thinkingmanagement.com/methodologies/friction-score/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thinkingmanagement.com/signal.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thinkingmanagement.com/signal/ai-doesnt-create-your-culture.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://thinkingmanagement.com/signal/intelligence-abundance-framework.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -38,4 +39,3 @@
   <url><loc>https://thinkingmanagement.com/signal/provenance-the-missing-layer.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://thinkingmanagement.com/signal/provenance-the-four-layers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
-
