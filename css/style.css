@@ -163,6 +163,12 @@ nav .links a:hover { color: #0f0f1a; }
 .writing-item .meta-col { margin-left: 32px; text-align: right; flex-shrink: 0; }
 .writing-item .gated-note { display: block; color: #b0824a; font-size: 0.74rem; margin-top: 4px; font-weight: 500; }
 
+/* === FAQ === */
+.faq-item { border-bottom: 1px solid #ecedf0; padding: 22px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.faq-item p { max-width: 680px; margin-bottom: 0; color: #3a3a4a; font-size: 1rem; line-height: 1.8; }
+
 /* === Contact === */
 .contact-links { display: flex; gap: 40px; margin-top: 20px; }
 .contact-links a {

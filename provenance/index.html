@@ -16,6 +16,47 @@
   <link rel="canonical" href="https://thinkingmanagement.com/provenance/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
   <link rel="stylesheet" href="/css/style.css?v=20260315">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Provenance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Provenance is a layered architecture specification for cross-layer attribution in AI systems: identity, action, artifact, and decision, captured at the layer where they happen instead of reconstructed afterward from logs. It treats the audit trail as a property of the system itself, not documentation produced about it after the fact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does this matter for organizations deploying AI agents now?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Article 12 of the EU AI Act took effect in August 2026 and requires exactly this kind of layer-level capture. Governance latency that scales with human review becomes the binding constraint once AI agents are taking thousands of actions a day, and Provenance is built to remove that constraint architecturally rather than patch it with more review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from existing AI audit-trail or logging tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most audit-trail tooling reconstructs what happened from logs after the fact. Provenance makes reconstruction, attribution, and reversal a structural property of the four layers, identity, action, artifact, and decision, rather than a forensic exercise applied to the system later."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will the full architecture document publish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The architecture document, co-authored by Nathan Kling and Ben Fisher, is in active development. The position piece and technical companion already on this page lay out the full case for the layer; the architecture document adds the implementable specification, interface contracts, and reference implementation sketch."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     .provenance-hero{padding:120px 0 56px;background:#fff;border-bottom:1px solid #ecedf0}
     .provenance-hero h1{font-size:2.6rem;line-height:1.2;margin-bottom:20px;max-width:680px}
@@ -49,6 +90,7 @@
       <a href="/frameworks/">Practice</a>
       <a href="/provenance/" class="active">Provenance</a>
       <a href="/signal">Signal</a>
+      <a href="#faq">FAQ</a>
       <a href="/#contact">Contact</a>
     </div>
   </div>
@@ -107,6 +149,29 @@
     <h2>Project context</h2>
     <p>Provenance is sibling work to The Lattice, a foundational paper on organizational design in the intelligence abundance era. The Lattice describes the organizational form that AI leverage requires. Provenance is the structural substrate that form depends on. The two projects publish independently and reference each other directly.</p>
     <p>Other methodologies and the implementations that prove them live on the <a href="/frameworks/">Practice page</a>.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="provenance-section" id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Provenance?</h3>
+      <p>Provenance is a layered architecture specification for cross-layer attribution in AI systems: identity, action, artifact, and decision, captured at the layer where they happen instead of reconstructed afterward from logs. I treat the audit trail as a property of the system itself, not documentation produced about it after the fact.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why does this matter for organizations deploying AI agents now?</h3>
+      <p>Article 12 of the EU AI Act took effect in August 2026 and requires exactly this kind of layer-level capture. Governance latency that scales with human review becomes the binding constraint once AI agents are taking thousands of actions a day, and I built Provenance to remove that constraint architecturally rather than patch it with more review.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How is this different from existing AI audit-trail or logging tools?</h3>
+      <p>Most audit-trail tooling reconstructs what happened from logs after the fact. Provenance makes reconstruction, attribution, and reversal a structural property of the four layers, identity, action, artifact, and decision, rather than a forensic exercise applied to the system later.</p>
+    </div>
+    <div class="faq-item">
+      <h3>When will the full architecture document publish?</h3>
+      <p>The architecture document, co-authored with Ben Fisher, is in active development. The position piece and technical companion already on this page lay out the full case for the layer; the architecture document adds the implementable specification, interface contracts, and reference implementation sketch.</p>
+    </div>
   </div>
 </section>
 
