@@ -238,6 +238,35 @@ nav .links a:hover { color: #0f0f1a; }
   padding: 24px 0 48px;
   background: #f7f8fa;
 }
+.signal-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.signal-filter-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #dcdfe6;
+  background: #fff;
+  color: #4a4a5a;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.signal-filter-btn:hover {
+  border-color: #2563a0;
+  color: #2563a0;
+}
+.signal-filter-btn.active {
+  background: #0f0f1a;
+  border-color: #0f0f1a;
+  color: #fff;
+}
+.writing-item[hidden] {
+  display: none;
+}
 .signal-year {
   font-size: 0.78rem;
   text-transform: uppercase;
