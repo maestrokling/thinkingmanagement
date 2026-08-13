@@ -159,7 +159,9 @@ nav .links a:hover { color: #0f0f1a; }
 .writing-item:hover { background: rgba(37, 99, 160, 0.03); }
 .writing-item .title { font-weight: 600; color: #0f0f1a; font-size: 1.02rem; }
 .writing-item .desc { color: #666; font-size: 0.88rem; margin-top: 4px; line-height: 1.6; }
-.writing-item .meta { color: #999; font-size: 0.82rem; white-space: nowrap; margin-left: 32px; font-weight: 500; }
+.writing-item .meta { color: #999; font-size: 0.82rem; white-space: nowrap; font-weight: 500; }
+.writing-item .meta-col { margin-left: 32px; text-align: right; flex-shrink: 0; }
+.writing-item .gated-note { display: block; color: #b0824a; font-size: 0.74rem; margin-top: 4px; font-weight: 500; }
 
 /* === Contact === */
 .contact-links { display: flex; gap: 40px; margin-top: 20px; }
@@ -438,6 +440,7 @@ footer {
   .stat .number { font-size: 1.8rem; }
   .writing-item { flex-direction: column; }
   .writing-item .meta { margin-left: 0; margin-top: 6px; }
+  .writing-item .meta-col { margin-left: 0; margin-top: 6px; text-align: left; }
   .contact-links { flex-direction: column; gap: 16px; }
   nav .links { display: none; }
   nav .links.open {
