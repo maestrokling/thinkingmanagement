@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Provenance: The AWS Reference Architecture | Nathan Kling</title>
+  <meta name="description" content="A three-account reference implementation of the Provenance layer on AWS: identity, action, artifact, and decision captured at the source, with an independently administered audit account. Co-authored with Ben Fisher.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Provenance: The AWS Reference Architecture">
+  <meta property="og:description" content="A three-account reference implementation of the Provenance layer on AWS: identity, action, artifact, and decision captured at the source, with an independently administered audit account.">
+  <meta property="og:image" content="https://thinkingmanagement.com/img/provenance-aws-architecture.png">
+  <meta property="og:url" content="https://thinkingmanagement.com/provenance/aws-architecture/">
+  <meta property="og:type" content="article">
+
+  <link rel="canonical" href="https://thinkingmanagement.com/provenance/aws-architecture/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+  <link rel="stylesheet" href="/css/style.css?v=20260315">
+  <style>
+    .arch-hero{padding:120px 0 48px;background:#fff;border-bottom:1px solid #ecedf0}
+    .arch-hero .eyebrow{font-size:.8rem;font-weight:600;color:#2563a0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+    .arch-hero h1{font-size:2.4rem;line-height:1.2;margin-bottom:20px;max-width:680px}
+    .arch-hero .lede{font-size:1.1rem;color:#4a4a5a;max-width:700px;line-height:1.8}
+    .arch-section{padding:56px 0;border-bottom:1px solid #ecedf0}
+    .arch-section:last-of-type{border-bottom:none}
+    .arch-section .container{max-width:860px}
+    .arch-section h2{font-size:1.3rem;font-weight:700;color:#0f0f1a;margin:0 0 16px}
+    .arch-section h3{font-size:1.05rem;font-weight:700;color:#0f0f1a;margin:28px 0 12px}
+    .arch-section p{font-size:1.05rem;line-height:1.85;color:#2a2a3a;margin:0 0 20px;max-width:720px}
+    .diagram-wrap{margin:0 0 12px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;background:#fff}
+    .diagram-wrap img{display:block;width:100%;height:auto}
+    .diagram-caption{font-size:.85rem;color:#888;margin:0 0 40px}
+    .account-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 0}
+    .account-card{border-radius:8px;padding:20px 22px}
+    .account-card.customer{background:#f7f9fb;border:1px solid #dde3ec}
+    .account-card.provenance{background:#f3f9f5;border:1px solid #cfe8d8}
+    .account-card.audit{background:#f8f6fb;border:1px solid #e0d6ef}
+    .account-card .account-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+    .account-card.customer .account-label{color:#2563a0}
+    .account-card.provenance .account-label{color:#1f7a44}
+    .account-card.audit .account-label{color:#6b3fa0}
+    .account-card h4{font-size:.95rem;font-weight:700;color:#0f0f1a;margin:0 0 8px}
+    .account-card p{font-size:.88rem;color:#555;line-height:1.6;margin:0 0 10px;max-width:none}
+    .account-card ul{margin:0;padding-left:18px}
+    .account-card li{font-size:.85rem;color:#444;line-height:1.6;margin-bottom:4px}
+    .pillar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 0}
+    .pillar-card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:20px 22px}
+    .pillar-card .pillar-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2563a0;margin-bottom:6px}
+    .pillar-card p{font-size:.92rem;color:#555;line-height:1.65;margin:0;max-width:none}
+    .status-block{background:#f7f8fa;border-left:4px solid #2563a0;border-radius:0 4px 4px 0;padding:20px 24px;margin:0}
+    .status-block .label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2563a0;margin-bottom:8px}
+    .status-block p{font-size:.97rem;color:#2a2a3a;margin:0;line-height:1.7;max-width:none}
+    .back-link{display:inline-block;margin-top:4px;font-size:.95rem;font-weight:600;color:#2563a0;text-decoration:none}
+    .back-link:hover{text-decoration:underline}
+    @media(max-width:860px){.account-grid{grid-template-columns:1fr}}
+    @media(max-width:680px){.arch-hero h1{font-size:1.8rem}.pillar-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="/" class="name">Nathan Kling</a>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <div class="links">
+      <a href="/#about">About</a>
+      <a href="/#services">What I Do</a>
+      <a href="/frameworks/">Practice</a>
+      <a href="/provenance/" class="active">Provenance</a>
+      <a href="/signal">Signal</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="arch-hero">
+  <div class="container">
+    <p class="eyebrow">Architecture Note &middot; Proposed October 11, 2026 &middot; Kling &amp; Fisher</p>
+    <h1>The AWS Reference Architecture</h1>
+    <p class="lede">The Provenance position piece and technical companion make the case for the layer. This is what it looks like built: a three-account AWS reference architecture, developed with Ben Fisher, that separates execution, evidence, and audit into accounts with different humans administering each one.</p>
+  </div>
+</section>
+
+<!-- Worked example -->
+<section class="arch-section">
+  <div class="container">
+    <h2>A worked example</h2>
+    <p>The reference architecture is specified against a concrete scenario: an agent selects an order amendment and obtains required human approval. Every box in the diagram below exists because that one scenario needs it, identity and policy at the top, the human decision in the middle, evidence capture running underneath it, and an independently administered account verifying none of it was altered after the fact.</p>
+    <div class="diagram-wrap">
+      <img src="/img/provenance-aws-architecture.png" alt="AI Provenance on AWS reference architecture diagram, showing the customer application account, Provenance account, and independent audit account, with execution, evidence, and verification flows between them.">
+    </div>
+    <p class="diagram-caption">Proposed architecture, October 11, 2026. Blue arrows: execution and authority. Green arrows: evidence and storage. Purple dashed arrows: independent checkpoint verification.</p>
+  </div>
+</section>
+
+<!-- Three accounts -->
+<section class="arch-section">
+  <div class="container">
+    <h2>Three accounts, three sets of hands</h2>
+    <p>The architecture's central decision isn't a service choice, it's a trust boundary. Execution, the evidence ledger, and the audit function each sit in a separate AWS account, and the independent audit account is administered by different people than the other two. A system can't be asked to verify its own history credibly if the same operators control the system and the record of it.</p>
+    <div class="account-grid">
+      <div class="account-card customer">
+        <div class="account-label">Customer application account</div>
+        <h4>Humans set authority and policy</h4>
+        <p>The application captures evidence at its source, before anything is lost to a log line written after the fact.</p>
+        <ul>
+          <li>Identity Service and Policy service: who can act, and under what human-controlled rules</li>
+          <li>Workflow, Agent workers, Action service: the Step Functions / Bedrock / connector path an agent actually takes</li>
+          <li>Human portal and Human review: the durable hold where a person approves before the action proceeds</li>
+          <li>Provenance SDK and Artifact service: evidence contracts, capture adapters, and C2PA content binding, running alongside the action, not after it</li>
+        </ul>
+      </div>
+      <div class="account-card provenance">
+        <div class="account-label">Provenance account</div>
+        <h4>Ledger acceptance and audit reconstruction</h4>
+        <p>Evidence delivered from the application account is accepted, signed, and made reconstructable, independent of whether the application account later changes its mind.</p>
+        <ul>
+          <li>Append-only ledger (Aurora PostgreSQL): events, links, and chain head</li>
+          <li>Managed signer: asymmetric AWS KMS key issuing receipts and checkpoints</li>
+          <li>Private ledger API: authenticate, validate, deduplicate before anything is accepted</li>
+          <li>Audit reconstruction and Audit output: independent verification against a defined scope, cutoff, and known gaps, not a best-effort reconstruction</li>
+        </ul>
+      </div>
+      <div class="account-card audit">
+        <div class="account-label">Independent audit account</div>
+        <h4>Separate roles, separate administration</h4>
+        <p>This account exists to answer one question credibly: has the ledger been altered since a given point in time.</p>
+        <ul>
+          <li>Protected checkpoints: S3 Object Lock and versioning over signed ledger boundaries</li>
+          <li>Protected recovery copies: ledger records and required content, with restore tests that include keys and schemas, not just data</li>
+          <li>A checkpoint detects changes; a recovery copy restores retained content. The two are deliberately kept separate.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Durable delivery -->
+<section class="arch-section">
+  <div class="container">
+    <h2>Evidence can't be allowed to go missing in transit</h2>
+    <p>Local database changes and outbox events share one transaction, so an action and the record that it happened are never allowed to diverge. From there, durable outboxes retain evidence until a receipt confirms the ledger accepted it, and delivery workers handle the SQS-plus-dead-letter-queue reconciliation that keeps pending evidence alive until acceptance, rather than dropping it on a transient failure. SQS is the initial transport; the delivery design is built to tolerate swapping in Kafka without changing the contract above it. The same verification rules that run in the application account also run in the independent audit tools, so an auditor isn't trusting the system's own account of whether its rules were followed.</p>
+  </div>
+</section>
+
+<!-- Four pillars, as infrastructure -->
+<section class="arch-section">
+  <div class="container">
+    <h2>The four pillars, mapped to this architecture</h2>
+    <p>Each pillar from the Provenance specification lands on a distinct part of the diagram above, because no single AWS primitive covers identity, action, artifact, and decision at once.</p>
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <div class="pillar-label">Identity</div>
+        <p>The Identity Service and Policy service bind who or what acted, and under which human-controlled rule, at the moment the workflow starts, not inferred later from IAM logs.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-label">Action</div>
+        <p>Workflow, Agent workers, and Action service capture what was done as a structural event in the Provenance SDK's capture path, not a line an application chose to log.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-label">Artifact</div>
+        <p>The Artifact service creates and validates C2PA content bindings before anything lands in versioned S3 staging, so provenance travels with the artifact rather than beside it.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-label">Decision</div>
+        <p>Human review, the durable hold, and the append-only ledger record why an action was authorized as part of the chain, reconstructable later with a defined scope and known gaps instead of assembled after the fact from tickets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Status -->
+<section class="arch-section">
+  <div class="container">
+    <h2>Status</h2>
+    <div class="status-block">
+      <p class="label">In active development</p>
+      <p>This diagram reflects the proposed architecture as of October 11, 2026. The implementation, and its Architecture Decision Records, currently live in a private repository co-owned with Ben Fisher. We're resolving how it's licensed before anything beyond this architecture overview publishes in full; our working default, consistent with how the rest of this work publishes, is open-source rather than closed. This page will link directly to the public repository and the full architecture document once that's settled.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Back -->
+<section class="arch-section">
+  <div class="container">
+    <a href="/provenance/" class="back-link">&larr; Back to Provenance</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="/img/logo.png" alt="Thinking Management" class="footer-logo">
+    <p>&copy; 2026 Nathan Kling &middot; <a href="https://thinkingmanagement.com">thinkingmanagement.com</a></p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
